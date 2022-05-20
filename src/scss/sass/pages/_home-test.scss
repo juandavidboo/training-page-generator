@@ -1,0 +1,982 @@
+// Removing ARIA tool from staging
+#INDWrap, .eb-page-banner.eb-breadcrumb-only {
+  display: none !important;
+}
+
+// Remove help and Stormbreaker
+
+#launcher {
+  display: none !important;
+}
+
+#stormbreaker {
+  display: none !important;
+}
+
+
+#home-test {
+
+  // Additional styles
+
+  // Focus styling
+
+  :focus, [tabindex="0"]:focus {
+    outline-color: #D71EF7;
+    outline: 1px solid #D71EF7 !important;
+  }
+
+  .accordion-button:focus, #home-test #faq .accordion-item:first-of-type .accordion-button:focus {
+    box-shadow: 0 0 0 2px rgb(215, 30, 247, 100%);
+  }
+
+  // Display helpers
+
+  .hidden {
+    display: none;
+  }
+
+  .hidden-lg {
+    @media screen and ( min-width: $md ) {
+      display: none;
+    }
+  }
+
+  .show-lg {
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+
+  // margin helpers
+
+  .spaced-120 {
+    > * {
+      margin-bottom: 120px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .h-mb-0 {
+    margin-bottom: 0;
+  }
+
+  .h-mb-66 {
+    margin-bottom: 66px;
+  }
+
+  .h-mb-36 {
+    margin-bottom: 36px;
+  }
+
+  .h-mb-40 {
+    margin-bottom: 40px;
+  }
+
+  .h-mb-48 {
+    margin-bottom: 48px;
+  }
+
+  .h-mb-56 {
+    margin-bottom: 56px;
+  }
+
+  .h-mb-60 {
+    margin-bottom: 60px;
+  }
+
+  .h-mb-64 {
+    margin-bottom: 64px;
+  }
+
+  .h-mb-80 {
+    margin-bottom: 80px;
+  }
+
+  .h-mb-108 {
+    margin-bottom: 108px;
+  }
+
+  .h-mb-0-md {
+    @media screen and ( min-width: $md ) {
+      margin-bottom: 0;
+    }
+  }
+
+  .h-mt-120-tabs-bp {
+
+    @media screen and ( min-width: $md ) {
+      margin-top: 120px;
+    }
+  }
+
+  .scroll-margin {
+    scroll-margin-top: 80px;
+  }
+
+  // Font size _helpers
+
+  .h-fs-xs {
+    font-size: var(--fs-xs); //12px
+  }
+
+  .--fs-md-28 {
+    
+    @media screen and ( min-width: $md ) {
+      font-size: 28px;
+    }
+  }
+
+  // Container replacement fix
+  #eb-my-items-section > .container-fluid {
+    padding: 0; // make it 100% wide
+    overflow: hidden; // instead of margin reset on child row from margin -8px
+
+  }
+
+  // missing links finder
+  a[href="#"] {
+    color: #b11818 !important;
+  }
+
+
+  .bob-link {
+    color: 	var(--color-navy);
+  }
+
+  .bob-link--carot::before {
+    background-color: var(--color-navy);
+  }
+
+  .bob-button {
+    background-color: var(--color-navy);
+    border: 1px solid var(--color-navy);
+
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-navy);
+      border: 1px solid var(--color-navy);
+    }
+  }
+
+  // Owl carousel component overwrite
+
+  .owl-theme .owl-dots .owl-dot span {
+    height: 16px;
+    width: 16px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #002196;
+  }
+
+  #hero {
+    .bob-header__image {
+      overflow: unset;
+    }
+  }
+
+  #hero-cards{}
+
+  #learning-path {
+
+    // carousel LEARNING-PATH
+
+    .container { //removes scroll from carousel in small devices
+      overflow: hidden;
+
+      @media screen and ( min-width: $md ) {
+        overflow: inherit;
+      }
+
+      .learning-path__paths {
+        padding: 0;
+      }
+
+      .owl-carousel-paths {
+        width: 83.33333333%;
+        margin: auto;
+
+
+        @media screen and ( min-width: $sm ) {
+          width: 75%;
+        }
+        
+        @media screen and ( min-width: $md ) {
+          width: 100%;
+        }
+    
+        &.off {
+          @media screen and ( min-width: $md ) {
+            display: flex;
+            width: auto;
+          }
+        }
+    
+        .owl-stage-outer {
+          padding: 0; //centers owl-stage propperly
+          overflow: visible;
+        }
+      }
+
+      .bob-block__card {
+        margin-bottom: 40px;
+
+        .--fs-md-22 {
+          @media screen and ( min-width: $md ) {
+            font-size: 22px;
+          }
+        }
+      }
+    
+      .bob-card--text-lg {
+    
+        .bob-h3 {
+          @include ellipsis;
+          min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+          -webkit-line-clamp: 2;
+    
+          @media screen and ( min-width: 400px ) {
+            min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 1;
+          }
+        }
+    
+        .bob-p {
+          @include ellipsis;
+          min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+          -webkit-line-clamp: 4;
+    
+          @media screen and ( min-width: $md ) {
+            min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 3;
+          }
+    
+          @media screen and ( min-width: $lg ) {
+            min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 4;
+          }
+        }
+
+        .bob-link {
+          --lineheight: 28px;
+          @include ellipsis;
+          min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+          -webkit-line-clamp: 2;
+
+          @media screen and ( min-width: 400px ) {
+            min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 1;
+          }
+        }
+      }
+    }
+    // END carousel LEARNING-PATH
+  }
+
+  #benefits {
+    .bob-benefit {
+      margin-bottom: 60px;
+    }
+  }
+
+  //#zigzags {}
+
+  #training-tabcordion {
+
+    // Tabs/accordion
+
+    $color__light: #fff;
+    $color__active: #002196;
+    $border__radius: 8px;
+    $lighten__level: 8;
+    $darken__level: 8;
+    $font__weight: 700;
+
+
+    @mixin tab-active() {
+      background: $color__active;
+      color: $color__light;
+    }
+    
+    .ootb-tabcordion {
+      max-width: 100%;
+      &.has-tabs {
+        .ootb-tabcordion--tabs {
+          border-bottom: 1px solid #bdbdbd;
+          opacity: 1;
+          height: auto;
+          visibility: visible;
+        }
+    
+        .ootb-tabcordion--entry {
+          min-height: 0;
+    
+          &::before, &::after {
+            display: none;
+          }
+    
+          &.is-active {
+            .ootb-tabcordion--entry-content {
+              opacity: 1;
+              transition: opacity 400ms ease-in-out;
+            }
+          }
+          
+          .ootb-tabcordion--entry-content {
+            opacity: 0;
+            transition: opacity 400ms ease-in-out;
+          }
+        }
+      
+      }
+    }
+    
+    .ootb-tabcordion--tabs {
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      flex-flow: wrap;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    
+      .tab {
+        background: $color__light;
+        color: #000;
+        font-size: 16px;
+        font-weight: $font__weight;
+        border-radius: $border__radius;
+        border: none;
+        //border-right: 4px solid #fff; // Set the disstance with border instead of margin, for more accurate JS calculation of the width
+        //border-left: 4px solid #fff; // Set the disstance with border instead of margin, for more accurate JS calculation of the width
+        margin-right: 4px;
+        margin-left: 4px;
+        display: block;
+        height: 60px;
+        padding: 0 1rem;
+        cursor: pointer;
+
+        //&:focus,
+        &:hover {
+          background: #D0F2FF;
+          color: $color__active;
+        }
+
+        &.is-active {
+          background: $color__active;
+          color: $color__light;
+        }
+      }
+    }
+    
+    .ootb-tabcordion--entry {
+      //overflow: hidden;
+      &::before {
+        background: $color__light;
+        color: #000;
+        content: attr(data-title);
+        cursor: pointer;
+        font-weight: $font__weight;
+        text-align: center;
+        line-height: 60px;
+        border-radius: $border__radius;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        display: block;
+        height: 60px;
+        margin-bottom: 16px;
+        z-index: 1;
+        
+      }
+      
+      &:last-child {
+        &::before {
+          margin-bottom: 32px;
+        }
+      }
+
+      &::after {
+        content: '';
+        mask: var(--icon-carot);
+        mask-size: cover;
+        -webkit-mask: var(--icon-carot);
+        -webkit-mask-size: cover;
+        background-color: var(--color-black);
+        height: 12px;
+        width: 8px;
+        position: absolute;
+        right: 32px;
+        top: 24px;
+        transform: rotate(90deg);
+        transition: transform 0.2s ease-in-out;  
+        z-index: 1;
+      }
+    
+      &:hover,
+      &:focus {
+        &::before {
+          //background-color: #E8F8FF;
+          color: $color__active;
+        }
+      }
+    
+      &.is-active {
+        scroll-margin-top: 70px;
+
+        .ootb-tabcordion--entry-content {
+          height: auto;
+          opacity: 1;
+          transition: opacity 500ms ease-out -100ms;
+        }
+        
+        &::before {
+          background: $color__active;
+          color: #fff;
+        }
+        &::after {
+          background-color: var(--color-white);
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    
+    .ootb-tabcordion--entry-container {
+      overflow: hidden;
+    }
+    
+    .ootb-tabcordion--entry-content {
+      position: relative;
+      height: 0;
+      opacity: 0;
+      transition: margin 600ms ease-in;
+      padding: 0;
+    }
+    // END tabs/accordion
+
+    // carousel TRAINING-tabcordion
+
+    .container {
+      overflow: hidden;
+
+      @media screen and ( min-width: $md ) {
+        overflow: inherit;
+      }
+
+      .is-active {
+        .ootb-tabcordion--entry-container {
+          margin-top: 40px;
+          overflow: visible;
+        }
+      }
+      
+    }
+
+    .ootb-tabcordion {
+      .owl-carousel {
+        margin: 0 auto;
+        
+        &.off {
+          @media screen and ( min-width: $md ) {
+            display: flex;
+            width: auto;
+          }
+        }
+
+        &.owl-loaded {
+          display: flex;
+        }
+      }
+
+      .owl-carousel-tab1, .owl-carousel-tab2, .owl-carousel-tab3, .owl-carousel-tab4 {
+        width: 83.33333333%;
+        margin: auto;
+
+        @media screen and ( min-width: $sm ) {
+          width: 75%;
+        }
+    
+        .owl-stage-outer {
+          padding: 0; //centers owl-stage propperly
+          overflow: visible;
+        }
+      }
+      
+      .ootb-tabcordion__view-all {
+        margin: 40px auto 60px auto;
+        width: fit-content;
+      }
+
+      .owl-carousel-tab1, .owl-carousel-tab4 {
+        
+        .bob-card--course {
+          .bob-h3 {
+            @include ellipsis;
+            min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 3;
+      
+            @media screen and ( min-width: 630px ) {
+              min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 2;
+            }
+      
+            @media screen and ( min-width: $md ) {
+              min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 3;
+            }
+          }
+          .bob-p {
+            @include ellipsis;
+            min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 4;
+      
+            @media screen and ( min-width: $sm ) {
+              min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 3;
+            }
+      
+            @media screen and ( min-width: $md ) {
+              min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 4;
+            }
+          }
+        }
+      }
+
+      .owl-carousel-tab2, .owl-carousel-tab3 {
+        
+        .bob-card--course-image {
+          .bob-h3 {
+            @include ellipsis;
+            min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 2;
+      
+            @media screen and ( min-width: $sm ) {
+              min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 1;
+            }
+      
+            @media screen and ( min-width: $md ) {
+              min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 2;
+            }
+          }
+          .bob-p {
+            @include ellipsis;
+            min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+            -webkit-line-clamp: 4;
+      
+            @media screen and ( min-width: $sm ) {
+              min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: unset;
+            }
+      
+            @media screen and ( min-width: $md ) {
+              min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+              -webkit-line-clamp: 4;
+            }
+          }
+        }
+      }
+      
+    }
+    // END carousel TRAINING-tabcordion
+
+  }
+
+  #quote-slider {
+    overflow: hidden;
+
+    #quote-slider__carousel{
+      
+      &::before {
+        content: '';
+        //background: url(https://training.mulesoft.com/oltpublish/cmsres/images/quote_brand_pattern-mob.svg) no-repeat center top;
+        //background: url(https://training.mulesoft.com/oltpublish/cmsres/images/customer-quote-brand-pattern-desktop.svg) repeat-x center top;
+        //position: absolute;
+        //height: 204px;
+        //width: 94%;
+        //top: 40px;
+        //right: 3%;
+        //left: 3%;
+  
+        //@media screen and ( min-width: $sm ) {
+        //  height: 250px;
+        //  width: 80%;
+        //  top: 30px;
+        //  right: 10%;
+        //  left: 10%;
+        //}
+  
+  
+        @media screen and ( min-width: $md ) {
+          background: url(https://training.mulesoft.com/oltpublish/cmsres/images/customer-quote-brand-pattern-desktop.svg) repeat-x center top;
+          position: absolute;
+          height: 100%;
+          width: 820px;
+          top: 0;
+          right: unset;
+          left: 73%;
+        }
+      }
+    }
+
+
+    .carousel-inner {
+      //-webkit-transition: max-height 1s; 
+      //-moz-transition: max-height 1s; 
+      //-ms-transition: max-height 1s; 
+      //-o-transition: max-height 1s; 
+      //transition: max-height 1s;  
+      //height:auto;
+      //max-height:1000px;
+    }
+
+    .carousel-item {
+      @media screen and ( min-width: $md ) {
+        padding-top: 55px;
+      }
+    }
+
+    .quote-slider__img {
+      position: relative;
+
+      img {
+        border-radius: 50%;
+        box-shadow: 0 0 1rem rgba(0,0,0,.08);
+        max-width: 272px;
+        margin: 1rem auto 0 auto;
+        position: relative;
+
+        @media screen and ( min-width: $md ) {
+          margin-bottom: 1rem;
+          max-width: 304px;
+        }
+
+        @media screen and ( min-width: $lg ) {
+          margin-bottom: 1rem;
+          max-width: 358px;
+        }
+      }
+    }
+
+    .quote-slider__txt {
+      //padding-top: 25px;
+      position: relative;
+      margin-top: 79px;
+
+      @media screen and ( min-width: $md ) {
+        margin-top: 0px;
+      }
+
+      &::before {
+        position: absolute;
+        left: 12px;
+        top: -55px;
+        content: '';
+        width: 70px;
+        height: 47px;
+        background: url(https://training.mulesoft.com/oltpublish/cmsres/images/quote-img.svg) no-repeat left top;
+
+        @media screen and ( min-width: $sm ) {
+          left: -28px;
+        }
+      }
+
+      blockquote {
+        font-family: var(--ff-head);
+        font-weight: bold;
+        //font-size: var(--fs-h3); // 33px
+        //line-height: 2rem; // 44px
+        font-size: var(--fs-h2); // 33px
+        line-height: 2.75rem; // 44px
+        margin: 0 0 32px 0;
+
+        //@media screen and ( min-width: $sm ) {
+        //  font-size: var(--fs-h2); // 33px
+        //  line-height: 2.75rem; // 44px
+        //}
+
+        @media screen and ( min-width: $lg ) {
+          margin: 0 0 64px 0;
+        }
+      }
+      figcaption {
+        font-size: 16px;
+        line-height: 30px;
+
+        @media screen and ( min-width: $sm ) {
+          font-size: var(--fs-h3);
+        line-height: 2rem;
+        }
+      }
+    }
+
+    .carousel-indicators {
+      position: relative;
+      margin-top: 60px;
+
+      [data-bs-target] {
+        width: 60px;
+        height: 5px;
+        background-color: #526068;
+        opacity: 1;
+        position: relative;
+  
+        @media screen and ( min-width: $md ) {
+          width: 90px;
+        }
+
+        &::before {
+          width: 0%;
+          height: 5px;
+          content: '';
+          top: 0px;
+          left: 0px;
+          position: absolute;
+          opacity: 1;
+          background-color: #00A0DF;
+          transition: all 0s linear;
+        }
+
+        &.active {
+          
+          &::before {
+            width: 100%;
+            transition: all 10s linear;
+          }
+        }
+  
+      }
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-top: 215px;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      display: none;
+
+      @media screen and ( min-width: 320px ) {
+        display: inline-block;
+        width: 58px;
+        height: 58px;
+        top: 100%;
+        //bottom: inherit;
+        opacity: 1;
+      }
+
+      @media screen and ( min-width: $md ) {
+        top: 240px;
+      }
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 58px;
+      height: 58px;
+
+      &::before {
+        background-color: #fff;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        left: 0;
+        //top: 0;
+      }
+      
+      &::after {
+        content: '';
+        -webkit-mask: var(--icon-carot); //url('components/assets/shape_btn_carot.svg');
+        -webkit-mask-size: 14px 20px;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: 24px center;
+        mask: var(--icon-carot); //url('components/assets/shape_btn_carot.svg');
+        mask-size: 14px 20px;
+        mask-repeat: no-repeat;
+        mask-position: 24px center;
+        background-color: var(--color-ms-blue);
+        height: 58px;
+        width: 58px;
+
+        position: absolute;
+        left: 0;
+        //top: 0;
+        
+      }
+
+      &:hover {
+        &::before {
+          background-color: var(--color-ms-blue);
+        }
+
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+    }
+
+    .carousel-control-prev-icon {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+
+    .carousel-control-prev-icon {
+      //transform: rotate(180deg);
+    }
+
+    .carousel-dark .carousel-control-prev-icon, .carousel-dark .carousel-control-next-icon {
+      filter: none;
+    }
+  }
+
+  #brands {
+    overflow: hidden;
+
+    // carousel BRANDS
+
+    .owl-carousel-brands {
+      width: auto;
+      width: 100%;
+
+      .owl-stage-outer {
+        padding: 0; //centers owl-stage propperly
+        overflow: visible;
+      }
+    }
+
+    .carousel__img--brand {
+      height: 80px;
+      display: table-cell;
+      vertical-align: middle;
+
+      img {
+        max-height: 80px;
+        max-width: 200px;
+      }
+    }
+    // END carousel BRANDS
+
+    .bob-h3 {
+      color: var(--color-dark-navy);
+    }
+  }
+
+  #faq {
+    overflow: auto;
+
+    .bob-h2 {
+      margin-bottom: 40px;
+      text-align: center;
+
+      @media screen and ( min-width: $md ) {
+        text-align: left;
+      }
+    }
+
+    // FAQ accordion overwrite
+
+    .accordion-item {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid var(--color-alto);
+    }
+
+    .accordion-item:first-of-type,
+    .accordion-item:last-of-type {
+      border-radius: 0;
+    }
+
+    .accordion-item:first-of-type {
+      border-top: 2px solid var(--color-alto);
+    }
+    
+    .accordion-item:first-of-type .accordion-button {
+      border-radius: 0;
+    }
+
+    .accordion-button {
+      background-color: transparent;
+      padding: 24px 0;
+    }
+
+    .accordion-body {
+      padding: 0 24px 24px 0;
+
+      .bob-p{
+        margin-bottom: 0;
+      }
+      .bob-p + .bob-p{
+        margin-top: 12px;
+      }
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: #000;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .accordion-button::after {
+
+      //mask: url('components/assets/shape_btn_carot.svg');
+      mask: var(--icon-carot);
+      mask-size: cover;
+      //-webkit-mask: url('components/assets/shape_btn_carot.svg');
+      -webkit-mask: var(--icon-carot);
+      -webkit-mask-size: cover;
+      background-color: var(--color-navy);
+      transform: rotate(90deg);
+
+      height: 12px;
+      width: 8px;
+      transition: transform 0.2s ease-in-out;  
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      transform: rotate(-90deg);
+    }
+
+    .accordion-button h3 {
+      margin-right: 1rem;
+    }
+    // END FAQ accordion overwrite
+  }
+
+  // Wrapper ligthblue with white top
+
+  .wrapper-bkg-lt-blue {
+    background-color: #E8F8FF;
+
+    &.bkg-white-top {
+      position: relative;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        height: 440px;
+        background-color: #fff;
+        width: 100%;
+  
+        @media screen and ( max-width: 991px ) {
+          background-color: #E8F8FF;
+          top: -80px;
+        }
+      }
+    }
+
+  }
+  // END Wrapper ligthblue with white top
+
+}

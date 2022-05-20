@@ -1,0 +1,360 @@
+.bob-card {
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
+  width: 100%;
+  margin-bottom: 24px; //40
+
+  position: relative; // link-cover
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .2);
+    cursor: pointer;
+  }
+
+  @media screen and ( min-width: $md ) {
+    margin-bottom: 0;
+  }
+
+  &.bob-card--border {
+    border-width: 5px 0 0 0;
+    background-color: var(--color-white); 
+  }
+
+  .bob-card__link-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    span {
+      font-size: 0;
+      opacity: 0;
+    }
+  }
+  
+  &__img {
+    overflow: hidden;
+    
+    @media screen and ( min-width: 360px ) {
+      height: 160px;
+    }
+
+    img {
+      margin: unset;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__txt {
+    padding: 32px;
+  }
+
+  .bob-eyebrow--small {
+    margin-bottom: var(--token-4);
+    @include ellipsis;
+  }
+
+  .bob-h3 {
+    --lineheight: 32px;
+    margin-bottom: var(--token-8);
+  }
+
+  .bob-p {
+    --lineheight: 30px;
+    margin-bottom: 40px;
+  }
+
+  &--text-sm {
+    margin-bottom: 24px;
+
+    .bob-card__txt {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+      }
+    }
+
+    .bob-p {
+      margin-bottom: 24px;
+
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+
+  &--text-md {
+    //margin-bottom: 24px;
+
+    .bob-card__txt {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+      }
+    }
+
+    .bob-p {
+      margin-bottom: 24px;
+
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3;
+      }
+
+      @media screen and ( min-width: $lg ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+
+  &--text-lg {
+    margin-bottom: 24px;
+
+    .bob-card__txt {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+      }
+    }
+
+    .bob-p {
+      margin-bottom: 24px;
+
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 4;
+      }
+
+      @media screen and ( min-width: $lg ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  &--text {
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3;
+      }
+
+      @media screen and ( min-width: $lg ) {
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    .bob-p {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 4;
+      }
+
+      @media screen and ( min-width: $lg ) {
+        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
+  &--image {
+    margin-bottom: 24px;
+
+    .bob-card__txt {
+      padding-top: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $sm ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    .bob-p {
+      @media screen and ( min-width: $sm ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3;
+      }
+
+    }
+  }
+
+  &--course {
+    margin-bottom: 24px;
+
+    .bob-card__txt {
+      //padding-bottom: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }      
+    }
+
+
+    .bob-p {
+      //margin-bottom: 0px;
+
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  &--course-image {
+
+    .bob-card__img {
+      background-color: var(--color-dark-navy);
+      position: relative;
+      overflow: hidden;
+      text-align: right;
+
+      &:before {
+        content: '';
+        background: url('https://www.mulesoft.com/training/assets/images/shared/patern_green_dots.svgz') no-repeat;
+        height: 104px;
+        width: 148px;
+    
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+      }
+
+      @media screen and ( min-width: 360px ) {
+        height: 160px;
+      }
+
+    .bob-card__cert {
+      color: var(--color-white);
+      font-family: var(--font-head);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+      
+      display: inline-block;
+      height: 24px;
+      margin: 16px 0 0 16px;
+      padding-left: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &::before {
+        content: '';
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: var(--color-white);
+
+        height: 24px;
+        width: 24px;
+        position: absolute;
+      }
+
+      &.cert--mulesoft {
+
+        &::before {
+          mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_handshake.svg') no-repeat;
+          -webkit-mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_handshake.svg') no-repeat;
+          left: 0px;
+          top: 2px;
+        }
+      }
+
+      &.cert--community {
+
+        &::before {
+          mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_ribbon.svg') no-repeat;
+          -webkit-mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_ribbon.svg') no-repeat;
+          left: 0px;
+          top: 0px;
+        }
+      }
+    }
+
+    .bob-card__icon{
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      background-size: 100%;
+      display: inline-block;
+      padding-top: 44%;
+      width: 33%;
+      max-width: 122px;
+      margin-right: 10%;
+
+      @media screen and ( min-width: 360px ) {
+        padding-top: 0;
+        height: 160px;
+      }
+
+      &.icon--document {
+        background-image: url('https://www.mulesoft.com/training/assets/images/shared/icon_lib_document.svgz');
+      }
+      &.icon--minicourse {
+        background-image: url('https://www.mulesoft.com/training/assets/images/shared/icon_lib_course.svgz');
+      }
+      &.icon--video {
+        background-image: url('https://www.mulesoft.com/training/assets/images/shared/icon_lib_video.svgz');
+      }
+    }
+
+  }
+    
+    .bob-card__txt {
+      padding-top: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }      
+    }
+
+    .bob-p {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 4;
+      }
+
+    }
+  }
+}

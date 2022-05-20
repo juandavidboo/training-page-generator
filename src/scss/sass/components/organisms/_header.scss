@@ -1,0 +1,116 @@
+.bob-header--bkg {
+  position: relative;
+  $margin-token: 6.25em; //10em;
+  margin-bottom: $margin-token;
+  text-align: center;
+
+  @media screen and (min-width: $md) {
+    text-align: left;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -100px; //-180px;
+    height: 100px;
+    width: 100%;
+    //background: url('https://www.mulesoft.com/training/assets/images/composer/bkg-gradient-b_squeeze.png') repeat-x top left;
+    background: rgb(243,248,251);
+    background: linear-gradient(180deg, rgba(243,248,251,1) 0%, rgba(255,255,255,1) 100%); // #F3F8FB
+  }
+
+  //& .row > div[class^="col"] {
+  .bob-hero > .row > .col-12:first-child {
+
+    @media screen and (max-width: $md) {
+      $margin-token: 4em;
+      margin-bottom: $margin-token;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+//keep this
+.bob-header {
+
+  & > .row {
+    //min-height: 560px; //660 if 6col
+  }
+  
+  & > .row > .col-12:first-child {
+
+    @media screen and (max-width: $md) {
+      $margin-token: 3em;
+      margin-bottom: $margin-token;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__texts {
+    margin-top: 40px;
+    line-height: 0;
+    text-align: center;
+    
+    @media screen and ( min-width: $md ) {
+      margin-top: 0;
+    }
+    
+    @media screen and ( min-width: $md ) {
+      text-align: left;
+    }
+
+    .bob-eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .bob-h3 {
+      margin-bottom: 16px;
+    }
+
+    .bob-p {
+      margin-bottom: 24px;
+    }
+  }
+
+  .bob-button + .bob-button {
+    margin-top: 24px;
+    
+    @media screen and ( min-width: $md ) {
+      //margin: 0;
+      margin-left: 24px;
+    }
+  }
+  .col-md-8 {
+    .bob-button + .bob-button {
+      @media screen and ( min-width: $md ) {
+        margin-left: 24px;
+      }
+    }
+
+  }
+
+  &__image {
+    overflow: hidden;
+
+    @media screen and (min-width: $lg) {
+      overflow: unset;
+    }
+
+    > img, > video {
+      max-width: 100%;
+      
+      @media screen and (min-width: $md) {
+        max-width: unset;
+      }
+    }
+  }
+}

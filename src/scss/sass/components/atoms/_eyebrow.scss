@@ -1,0 +1,20 @@
+.bob-eyebrow {
+  color: var(--color-pale-sky);
+  font-family: var(--ff-head);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 2em;
+  min-height: 2em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  display: block;
+  
+  &--small {
+    @extend .bob-eyebrow;
+    font-size: 0.75rem;
+    
+      //.bob-card & {
+      //  color: var(--color-pale-sky);
+      //}
+  }
+}

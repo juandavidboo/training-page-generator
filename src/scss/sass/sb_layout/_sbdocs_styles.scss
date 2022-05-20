@@ -1,0 +1,204 @@
+/*:root {
+    --story-padding: 1rem;
+    font-size: 1rem;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    padding: var(--story-padding);
+  }
+
+  // IMPORTANT! selector used to hide stories from sidebar
+  //button[id^='_hidden_']{display: none !important}
+
+  .sbdocs .sbdocs-content {
+    max-width: 1320px !important;
+  }
+  .sbdocs .sbdocs-content table td {
+    line-height: 1.4em;
+  }
+
+  .sbdocs-wrapper > h1 {
+    font-size: 34px !important;
+  }
+  
+  .sbdocs-wrapper > h2 {
+    margin: 60px 0 8px !important;
+  }
+  
+  .sbdocs-wrapper > h2:first {
+    margin: 60px 0 8px !important;
+  }
+  
+  .sbdocs-wrapper > h2 code {
+    font-size: 28px !important;
+    padding: 0 6px !important;
+  }
+
+  .sbdocs-wrapper > h3,
+  .sbdocs-wrapper > h4 {
+    margin: 30px 0 16px 0 !important;
+  }
+  
+  .sbdocs-wrapper h3 code,
+  .sbdocs-wrapper h4 code {
+    font-size: 22px !important;
+    padding: 0 6px !important;
+  }
+  
+  .sbdocs-wrapper p {
+    font-size: 16px !important;
+    max-width: 800px !important;
+  }
+  
+  .sbdocs-wrapper table {
+    font-size: 16px !important;
+  }
+  
+  .sbdocs-wrapper ul li {
+    font-size: 16px !important;
+    max-width: 800px !important;
+  }
+  
+  .sbdocs-wrapper ol li {
+    font-size: 16px !important;
+    max-width: 800px !important;
+  }
+  
+  .sbdocs-wrapper ol li::marker {
+    font-weight: bold !important;
+  }
+  
+  .sbdocs-wrapper a {
+    color: #0070d2 !important;
+  }
+  
+    .sbdocs-wrapper a:hover {
+      text-decoration: underline !important;
+    }
+
+  .sbdocs-wrapper blockquote {
+    border-color: #0070d0 !important;
+  }
+
+  .sbdocs-wrapper blockquote p {
+    font-size: 20px !important;
+    max-width: 800px !important;
+    line-height: 28px !important;
+  }
+
+  .sbdocs-wrapper mark {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #fffb76;
+    margin-bottom: 12px;
+  }
+
+  .sbdocs-wrapper pre code {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .sbdocs-wrapper code,
+  .sbdocs-wrapper p code {
+    border-radius: 6px !important;
+    background-color: #fff !important;
+    padding: 0 4px !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 1px #e5e5e5 !important;
+  }
+
+  .sbdocs-wrapper a code {
+    color: #0070d2 !important;
+
+     border-color: #bce0ff!important; 
+    box-shadow: 0 0 0 1px #bce0ff !important;
+    background-color: #eff8fe !important;
+    border-color: transparent !important;
+  }
+
+  .sbdocs-wrapper img {
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px #00000036 !important;
+    border: 8px white solid !important;
+  }
+
+  .sbdocs-wrapper a img:hover {
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px#0070d2 !important;
+    border: 8px #0070d2 solid !important;
+  }
+
+  .sbdocs-wrapper table img {
+    max-width: 100px !important;
+  }
+
+  .sbdocs-wrapper .buttonmdx,
+  .sbdocs-wrapper a.buttonmdx {
+    background-color: white !important;
+    border: 2px solid #333 !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-family: monospace !important;
+    font-size: 16px !important;
+  }
+
+  .sbdocs-wrapper .buttonmdx:hover,
+  .sbdocs-wrapper a.buttonmdx:hover {
+    background-color: #f1f1f1 !important;
+    cursor: pointer;
+  }
+
+  .sbdocs-wrapper .buttonmdx:focus,
+  .sbdocs-wrapper a.buttonmdx:focus {
+    outline: none !important;
+  }
+
+  .sbdocs-wrapper a.buttonmdx.jump::before {
+    content: "⇣ Jump to API";
+    visibility: visible;
+  }*/
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    //padding: var(--story-padding);
+    line-height: 0;
+  }
+
+  .sbdocs .sbdocs-content {
+    max-width: 100%;
+  }
+
+  .sb-show-main.sb-main-padded {
+    margin: 0;
+    //padding: 1rem 0 0 0;
+    display: block;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 992px) {
+      
+    }
+  }
+  
+  .sbdocs-table {
+    //width: 100%;
+  }
+
+  

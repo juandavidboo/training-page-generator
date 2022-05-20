@@ -1,0 +1,155 @@
+// COLOR CLASSES
+// Color classes generator.
+// Add new colors to SASS variables $colors-map in _variables.scss file to generate background and border classes.
+// Classes name pattern: --bkg-$name and --border-$name | e.g.: --bkg-white --border-white
+
+@each $name, $value in $color-map {
+  .h-bkg-#{$name} {
+    background-color: $value;
+  }
+  .h-border-#{$name} {
+    border: 1px solid $value;
+  }
+}
+
+
+// TOKEN SPACER CLASSES
+// Spacer classes generator.
+// Add colors to $token-map to generate background and border classes.
+
+@each $name, $value in $token-map {
+  .h-height-#{$name} {
+    height: $value;
+  }
+  .h-mt-#{$name} {
+    margin-top: $value;
+  }
+  .h-mb-#{$name} {
+    margin-bottom: $value;
+  }
+  .h-my-#{$name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  .h-mx-#{$name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .h-pt-#{$name} {
+    padding-top: $value;
+  }
+  .h-pb-#{$name} {
+    padding-bottom: $value;
+  }
+  .h-py-#{$name} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .h-px-#{$name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}
+
+
+// This are the most used helpers.
+
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// clearfix
+%clearfix {
+ &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.h-clearfix {
+  @extend %clearfix;
+}
+
+/// Only display content to screen readers
+/// @link http://a11yproject.com/posts/how-to-hide-content/
+
+.h-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/// Use in conjunction with .sr-only to only display content when it's focused.
+/// Useful for "Skip to main content"
+/// @link http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+
+.h-sr-only--focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+/// * Helper class to truncate and add ellipsis to a string too long for it to fit
+/// * on a single line.
+/// * 1. Prevent content from wrapping, forcing it on a single line.
+/// * 2. Add ellipsis at the end of the line.
+
+.h-ellipsis {
+  @include ellipsis;
+}
+
+// Vertical gradient background
+
+.h-gradient-bkg-bluez {
+  &::after {
+    content: '';
+    //background: url('https://www.mulesoft.com/training/assets/images/composer/bkg-gradient-b_squeeze.png') repeat-x top left;
+    background: rgb(243,248,251);
+    background: linear-gradient(180deg, rgba(243,248,251,1) 0%, rgba(255,255,255,1) 100%); // #F3F8FB
+    display: block;
+    position: absolute;
+    //top: 100px; //-180px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+/// Inverts columns order according to device/screen size.
+/// Add it to the '.row' or cols wrapper
+
+.h-sm-col-swap > [class^='col-']:first-child { 
+
+  @media screen and (min-width: $sm) {
+    order: 1;
+  }
+}
+
+.h-md-col-swap > [class^='col-']:first-child { 
+
+  @media screen and (min-width: $md) {
+    order: 1;
+  }
+}
+
+.h-lg-col-swap > [class^='col-']:first-child { 
+
+  @media screen and (min-width: $lg) {
+    order: 1;
+  }
+}

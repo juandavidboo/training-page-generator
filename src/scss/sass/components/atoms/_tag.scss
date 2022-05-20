@@ -1,0 +1,64 @@
+.bob-tag {
+  color: var(--color-pale-sky);
+  font-family: var(--ff-head);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 24px;
+  min-height: 24px;
+  margin-bottom: 8px;
+  padding: 0 8px;
+
+  &--color-magenta {
+    color: var(--color-white);
+    background-color: var(--color-magenta);
+
+    &-inverted {
+      color: var(--color-magenta);
+      background-color: rgba(229, 0, 151, 0.1);
+      //border: 1px solid #F8E6F2;
+    }
+  }
+  &--color-viridian {
+    color: var(--color-white);
+    background-color: var(--color-viridian);
+    
+    &-inverted {
+      color: var(--color-viridian);
+      background-color: rgba(0, 179, 156, 0.1);
+      //border: 1px solid #E6F8F6;
+    }
+  }
+  &--color-orange {
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    
+    &-inverted {
+      color: var(--color-orange);
+      background-color: rgba(233, 112, 0, 0.1);
+      //border: 1px solid #F8ECE1;
+    }
+  }
+  &--color-indigo {
+    color: var(--color-white);
+    background-color: var(--color-indigo);
+    
+    &-inverted {
+      color: var(--color-indigo);
+      background-color: rgba(94, 102, 249, 0.1);
+      //border: 1px solid #EAEBFA;
+    }
+  }
+  &--color-purple {
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    
+    &-inverted {
+      color: var(--color-purple);
+      background-color: rgba(149, 0, 219, 0.1);
+      //border: 1px solid rgba(149, 0, 219, 0.1);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.bob-block__card {
+  width: 100%;
+  margin: 16px 0;
+
+
+  .bob-eyebrow--small, .bob-eyebrow {
+    margin-bottom: var(--token-4);
+    @include ellipsis;
+  }
+
+  .bob-h3 {
+    --lineheight: 32px;
+    margin-bottom: var(--token-8);
+  }
+
+  .bob-p {
+    --lineheight: 30px;
+    margin-bottom: 24px;
+  }
+
+}

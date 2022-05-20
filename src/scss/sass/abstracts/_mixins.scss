@@ -1,0 +1,39 @@
+// Most used mixins.
+//
+// Note: If you use a framework (bootstrap, zurb etc.) that includes mixins you can import them too or remove this file.
+/// @example @include word-wrap;
+
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/// Preventing Overflow with Ellipsis
+/// @example @include ellipsis;
+
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  //white-space: nowrap;
+}
+
+/// Font-smothing
+/// @example @include font-smoothing(on);
+/// @include font-smoothing(off);
+@mixin font-smoothing($value: on){
+  @if $value == on{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else{
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}

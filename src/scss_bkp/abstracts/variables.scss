@@ -1,0 +1,152 @@
+//@import 'functions';
+
+// 'rem' base value
+$rem: 10px;
+$sp: 8px;
+
+//Screen sizes matching bootstrap grid
+
+//$grid-breakpoints:
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+//$container-max-widths:
+//  sm: 540px,
+//  md: 720px,
+//  lg: 960px,
+//  xl: 1160px, //1140px,
+//  xxl: 1160px, //1320px
+
+
+// Keywords for include media mixin
+$media-expressions: (
+  'color': blue,
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': (
+    '(-webkit-min-device-pixel-ratio: 1.5)',
+    '(min-resolution: 144dpi)',
+  ),
+  'retina3x': (
+    '(-webkit-min-device-pixel-ratio: 2.5)',
+    '(min-resolution: 240dpi)',
+  ),
+  'hover': (
+    '(hover: hover)' '(pointer: fine)',
+    '(-ms-high-contrast: none)',
+    '(-ms-high-contrast: active)',
+  ),
+  'theme-light': 'prefers-color-scheme: light',
+  'theme-dark': 'prefers-color-scheme: dark',
+  'ie': (
+    '(-ms-high-contrast: none)',
+    '(-ms-high-contrast: active)',
+  ),
+);
+
+$banana: map-get($media-expressions, 'color');
+
+:root {
+
+  // Fonts
+  --font-dinpro: 'EDINPro', 'DIN Pro', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-dinpro-lt: 'EDINProLight', 'DINPro-Light', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-dinpro-md: 'EDINProMedium', 'DINPro-Medium', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-dinpro-bd: 'DINProBold', 'DINPro-Bold', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-open-sans: 'Open Sans', "Segoe UI", Tahoma, sans-serif; //'open_sansregular' 'open_sansbold'
+
+  --font-deco: var(--font-dinpro);
+  --font-title: var(--font-dinpro-bd);
+  --font-copy: var(--font-open-sans);
+
+  // Fonts base
+  --font-size-4xs: 0.375rem;
+  --font-size-3xs: 0.5rem;
+  --font-size-2xs: 0.625rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.75rem;
+  --font-size-4xl: 2rem;
+  --font-size-5xl: 2.25rem;
+  --font-size-6xl: 2.5rem;
+  --font-size-7xl: 2.75rem;
+  --font-size-8xl: 3rem;
+  --font-size-9xl: 3.5rem;
+  --font-size-10xl: 4rem;
+
+  --line-height-none: 1em;
+  --line-height-tight: 1.125em;
+  --line-height-snug: 1.275em;
+  --line-height-normal: 1.5em;
+  --line-height-relaxed: 1.625em;
+  --line-height-loose: 2em;
+
+  // Colors
+  --color-grey: #999;
+  --color-blue: #ff0000//#39f;
+
+  //Primary colors
+  --color-white: #fff;
+  --color-black: #000;
+  --color-ms-blue: #00A0DF;
+  --color-dark-navy: #00044C;
+
+  //Secondary colors
+  --color-lt-blue: #E8F8FF; // light
+  --color-lt-gray: #E9F2F5; // light
+  --color-navy: #002196;
+  --color-indigo: #5E66F9;
+  --color-viridian: #00B39C;
+  --color-lime: #BCD85F;
+  --color-magenta: #E50097;
+  --color-purple: #9500DB;
+  --color-aqua: #00D4D4;
+  --color-orange: #E97000;
+  --color-coral: #F5877B;
+
+  //Tertiary colors
+  --color-tw-blue: #FAFEFF; // twilight
+  --color-reg-gray: #909AA3; // regent
+  --color-pale-sky: #6D7883;
+  --color-alto: #dbdbdb;
+
+  // Spacing
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --token: var(--spacing-md);
+  --token-xs: 0.25rem;
+  --token-sm: 0.5rem;
+  --token-md: 1rem;
+  --token-lg: 1.5rem;
+  --token-xl: 2rem;
+
+  // Spacing
+  $spacing-xs: 0.25rem;
+  $spacing-sm: 0.5rem;
+  $spacing-md: 1rem;
+  $spacing-lg: 1.5rem;
+  $spacing-xl: 2rem;
+
+  $token: $spacing-md;
+  $token-xs: 0.25rem;
+  $token-sm: 0.5rem;
+  $token-md: 1rem;
+  $token-lg: 1.5rem;
+  $token-xl: 2rem;
+}
+

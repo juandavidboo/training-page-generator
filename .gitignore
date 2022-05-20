@@ -26,7 +26,7 @@ composer.lock
 
 # markup
 /build/
-/assets/
+#/assets/
 /production/
 /.temp/
 .sass-cache

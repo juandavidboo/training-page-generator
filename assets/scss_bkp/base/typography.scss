@@ -1,0 +1,32 @@
+// Typography
+//
+// Base font styles for headings and links.
+
+//Fonts
+
+// Typography
+//
+// Base font styles for headings and links.
+
+//Fonts
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: var(--headings-font-family);
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  color: var(--headings-color);
+}
+
+//Font family
+.--font-deco {
+  font-family: var(--font-deco);
+}
+.--font-copy {
+  font-family: var(--font-copy);
+}

@@ -1,0 +1,64 @@
+.bob-zigzag {
+
+  & > .row {
+    @media screen and (min-width: $md) {
+      //min-height: 500px;
+    }
+  }
+
+  & > .row > [class^='col-']:first-child {
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 3em;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--col-swap > .row > [class^='col-']:first-child { 
+
+    @media screen and (min-width: $md) {
+      order: 1;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+
+    @media screen and (min-width: $lg) {
+      overflow: unset;
+    }
+
+    > img {
+      max-width: 100%;
+
+      @media screen and (min-width: $md) {
+        //max-width: unset; //uncomment hides image overflow in screens md-lg
+      }      
+    }
+  }
+
+  &__texts {
+    line-height: 0;
+
+    .bob-eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .bob-h3 {
+      margin-bottom: 16px;
+    }
+
+    .bob-p {
+      margin-bottom: 24px;
+    }
+
+    .bob-h3, .bob-p{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

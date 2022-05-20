@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 7" width="34" height="7">
+	<title>Ellipse 11-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #00a0df } 
+	</style>
+	<path id="Layer" class="s0" d="m3 6.14c-1.66 0-3-1.34-3-3c0-1.66 1.34-3 3-3c1.66 0 3 1.34 3 3c0 1.66-1.34 3-3 3z" />
+	<path id="Layer copy" class="s0" d="m31 6.14c-1.66 0-3-1.34-3-3c0-1.66 1.34-3 3-3c1.66 0 3 1.34 3 3c0 1.66-1.34 3-3 3z" />
+	<path id="Layer copy 2" class="s0" d="m17 6.14c-1.66 0-3-1.34-3-3c0-1.66 1.34-3 3-3c1.66 0 3 1.34 3 3c0 1.66-1.34 3-3 3z" />
+</svg>

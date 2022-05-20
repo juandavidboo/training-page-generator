@@ -1,0 +1,26 @@
+// All imports in this file will be compiled into vendors.css file.
+//
+// Note: You can import SCSS and CSS files as well.
+:root {
+--bs-gutter-x: 1rem;
+  @media screen and (min-width: 600px) and (max-width: 992px)  {
+    --bs-gutter-x: 2rem;
+  }
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 992px,
+  lg: 1160px,
+);
+
+$container-max-widths: (
+  // fixed sized containers
+  // xs: 360px,
+  // sm: 600px,
+  // md: 992px,
+  // lg: 1160px
+  xs: 100%,
+  lg: 1160px
+);

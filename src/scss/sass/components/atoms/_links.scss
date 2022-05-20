@@ -1,0 +1,201 @@
+.bob-link, .bob-button {
+  color: var(--color-ms-blue);
+  font-family: var(--ff-copy), sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 28px;
+  cursor: pointer;
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// only for links
+.bob-link {
+
+  .bob-card:hover &, // hover on card triggers link hover
+  &:hover {
+    color: var(--color-dark-navy);
+
+    span {
+      background-size: 100% 2px;
+    }
+  }
+
+  span {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+  }
+}
+.bob-link--carot {
+  position: relative;
+  padding-left: 38px;
+  display: inline-block;
+
+  .bob-card:hover &, // hover on card triggers link hover
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      background-color: var(--color-dark-navy);
+    }
+  }
+  
+  &::before {
+    content: '';
+    background-color: var(--color-ms-blue);
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  &::after {
+    content: '';
+    mask: var(--icon-carot); //url('components/assets/shape_btn_carot.svg');
+    mask-size: cover;
+    -webkit-mask: var(--icon-carot); //url('components/assets/shape_btn_carot.svg');
+    -webkit-mask-size: cover;
+    background-color: var(--color-white);
+    height: 12px;
+    width: 8px;
+
+    position: absolute;
+    left: 11px;
+    top: 8px;
+  }
+
+  &.play {
+    mask: url('components/assets/shape_btn_play.svg');
+    -webkit-mask: url('components/assets/shape_btn_play.svg');
+  }
+}
+
+.bob-link--inverted {
+  color: var(--color-white);
+
+  &::before {
+    background-color: var(--color-white);
+  }
+
+  &::after {
+    background-color: var(--color-viridian);
+  }
+
+  .bob-card:hover &, // hover on card triggers link hover
+  &:hover {
+    color: var(--color-white);
+    
+    &::before {
+      background-color: var(--color-white);
+    }
+  }
+}
+
+// only for buttons
+.bob-button {
+  color: var(--color-white);
+  background-color: var(--color-ms-blue);
+  line-height: 3.625em; // 16/58px
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: var(--color-ms-blue);
+  border: 1px solid var(--color-ms-blue);
+  min-width: 200px;
+  max-height: 3.75em; // 16/60px To prevent break lines
+  padding: 0 16px;
+  
+  @include ellipsis;
+  white-space: nowrap;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
+  @media screen and ( min-width: $sm ) {
+    max-width: 320px;
+    display: inline-block;
+  }
+
+  &:hover {
+    color: var(--color-ms-blue);
+    text-decoration: none;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-ms-blue);
+  }
+
+  & + & {
+    margin-left: 24px;
+    
+    @media screen and ( max-width: $sm ) {
+      margin: 0;
+      margin-top: 24px;
+    }
+  }
+
+  &--medium {
+    line-height: 2.875em; // 46px
+
+    display: inline-block;
+    min-width: unset;
+    max-height: 3em; // 16/48px To prevent break lines
+  }
+
+  &--small {
+    font-size: 0.8125rem; // 13px
+    line-height: 2.125rem; // 34px
+
+    display: inline-block;
+    min-width: unset;
+    max-height: 2.25rem; // 36px To prevent break lines
+  }
+
+  &--disabled {
+    opacity: 0.38;
+    pointer-events: none;
+  }
+
+  &--inverted {
+    color: var(--color-ms-blue);
+    background-color: transparent;
+    border: 1px solid var(--color-ms-blue);
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-ms-blue);
+      border: 1px solid  var(--color-white);
+    }
+  }
+
+  &--dark-navy {
+    color: var(--color-white);
+    background-color: var(--color-dark-navy);
+    border: 1px solid var(--color-dark-navy);
+
+    &:hover {
+      color: var(--color-dark-navy);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-dark-navy);
+    }
+
+    &.bob-button--inverted {
+      color: var(--color-dark-navy);
+      background-color: transparent;
+      border: 1px solid var(--color-dark-navy);
+  
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-dark-navy);
+        border: 1px solid var(--color-white);
+      }
+    }
+  }
+}

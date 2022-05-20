@@ -1,0 +1,83 @@
+// Typography
+//
+// Base font styles for headings and links.
+
+
+//Headlines
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.head {
+  font-family: var(--ff-head);
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  //line-height: 1.33em;
+  //color: var(--headings-color);
+}
+
+//Font family
+.ff-head {
+  font-family: var(--ff-head);
+}
+.ff-copy {
+  font-family: var(--ff-copy);
+}
+
+
+.bob-h1 {
+  color: var(--color-navy);
+  font-size: var(--fs-h1);  // 45px
+  line-height: 3.5rem; // 56px
+  margin-bottom: var(--token-24);
+  
+  &--color {
+    color: var(--color-ms-blue);
+  }
+
+  //font-size: var(--fs-h2);
+  //line-height: 1.33em;
+
+  @media screen and ( max-width: $sm ) {
+    font-size: var(--fs-h2);
+    line-height: 1.33em;
+  }
+}
+
+.bob-h2 {
+  font-size: var(--fs-h2); // 33px
+  line-height: 2.75rem; // 44px
+}
+
+.bob-h3 {
+  font-size: var(--fs-h3); // 22px
+  line-height: 2rem; // 32px
+}
+
+p {
+  font-family: var(--ff-copy), sans-serif;
+  font-size: 1rem;
+  line-height: 1.875em;
+  margin-bottom: 1.5em;
+}
+
+.bob-p {
+  font-family: var(--ff-copy), sans-serif;
+  font-size: 1rem;
+  line-height: 1.875em;
+  margin-bottom: 0.625em;
+
+  &:last-of-type {
+    //margin-bottom: var(--token-24);
+    margin-bottom: 1em;
+  }
+
+  &--large {
+    @extend .bob-p;
+    font-size: 1.375rem; // 22px
+    //line-height: 1.8125em;
+    line-height: 2.5rem;
+  }
+}

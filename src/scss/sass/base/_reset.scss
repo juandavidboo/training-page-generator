@@ -1,0 +1,55 @@
+// This is base reset for global components.
+//
+// Note: If you use a framework that includes base styling then you need to remove this file.
+
+//*,
+//*:before,
+//*:after {
+//  box-sizing: border-box;
+//}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font-smoothing(on);
+  color: var(--base-text-color);
+  background: var(--base-background-color);
+  font-family: var(--ff-copy);
+}
+
+img {
+  //max-width: 100%;
+  min-height: 1px;
+  height: auto;
+  
+  display: block;
+  margin: 0 auto;
+
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+video {
+  max-width: 100%;
+}
+
+// google map fix
+.gm-style img {
+  max-width: none;
+}
+
+//#eb-my-items-section > .container-fluid 
+.container-fluid {
+  padding: 0; // 100% wide
+  overflow: hidden; // no scroll
+}
+
+section {
+  position: relative;
+}
+

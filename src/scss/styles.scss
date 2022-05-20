@@ -1,21 +1,59 @@
-// Note: any .css or .scss files included in the 'styles' directory
-// will be correctly compiled during `gulp` and `gulp production`
-
-//* Vendors *//
-@import './src/vendor_entries/_include-media-or';
+//@import '../node_modules/bootstrap/scss/bootstrap.scss';
+//@import 'sass/sb_layout/sbdocs_styles';
+//@import 'sass/sb_layout/sb_styles_overwrite'; // evaluate removing later
 
 
-//* Abstracts modules *//
-@import 'abstracts/main';
 
-//* Base modules *//
-@import 'base/main';
+@import 'sass/vendor/bootstrap';
+@import 'sass/vendor/owl/owl.carousel';
+@import 'sass/vendor/owl/owl.theme.default';
+//@import 'sass/vendor/jquery-ui';
 
-//* Layout modules *//
-@import 'layout/main';
 
-//* Pages modules *//
-@import 'pages/main';
 
-//* Components *//
-@import 'components/main';
+@import 'sass/abstracts/variables';
+//@import 'sass/abstracts/functions';
+@import 'sass/abstracts/mixins';
+@import 'sass/abstracts/helpers';
+
+
+
+
+@import 'sass/base/reset';
+@import 'sass/base/typography';
+//@import 'sass/base/forms';
+
+
+//@import 'sass/layout/navigation';
+//@import 'sass/layout/grid';
+//@import 'sass/layout/header';
+//@import 'sass/layout/footer';
+//@import 'sass/layout/sidebar';
+//@import 'sass/layout/forms';
+
+
+//@import 'sass/components/atoms/paragraph';
+@import 'sass/components/atoms/links';
+@import 'sass/components/atoms/eyebrow';
+@import 'sass/components/atoms/badge';
+@import 'sass/components/atoms/tag';
+@import 'sass/components/molecules/block-card';
+@import 'sass/components/molecules/info-icons';
+@import 'sass/components/organisms/zigzag';
+@import 'sass/components/organisms/header';
+@import 'sass/components/organisms/card';
+@import 'sass/components/organisms/benefit';
+//@import 'components/‹buttons';
+//@import 'components/carousel';
+//@import 'components/cover';
+//@import 'components/dropdown';
+
+
+//@import 'sass/pages/reference';
+//@import 'sass/pages/composer';
+@import 'sass/pages/home-test';
+//@import 'sass/pages/contact';
+
+
+//@import 'themes/theme';
+//@import 'themes/admin';

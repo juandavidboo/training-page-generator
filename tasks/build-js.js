@@ -20,6 +20,7 @@ module.exports = function () {
   return (done) => {
     try {
       const config = {
+        devtool: 'inline-cheap-module-source-map',
         mode: 'none',
         entry: `./${global.folder.src}/js/${global.file.mainJs}`,
         output: {
@@ -48,9 +49,9 @@ module.exports = function () {
               exclude: /(node_modules)/,
               use: {
                 loader: 'babel-loader',
-              }
-            }
-          ]
+              },
+            },
+          ],
         },
         externals: global.buildJs.externalLibs,
       };
@@ -67,7 +68,7 @@ module.exports = function () {
               hash: false,
               chunks: false,
               colors: true,
-            })
+            }),
           );
         }
 

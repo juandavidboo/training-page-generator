@@ -2,7 +2,7 @@
 //
 // This file will be compiled into app.js
 // Feel free with using ES6 here.
-import $ from 'jquery';
+/*import $ from 'jquery';
 
 import dots from './modules/dots';
 
@@ -10,3 +10,5 @@ import dots from './modules/dots';
 $(() => {
   dots();
 });
+*/
+

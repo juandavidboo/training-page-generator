@@ -1,0 +1,73 @@
+.bob-benefit{
+  width: 100%;
+  margin-bottom: 40px;
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+  }
+  
+  &__img {
+    margin-bottom: 24px;
+
+    &--wide {
+      overflow: hidden;
+      
+      @media screen and ( min-width: 360px ) {
+        height: 160px;
+      }
+
+      img {
+        margin: unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__txt {
+    //padding: 32px;
+    text-align: center;
+  }
+
+  .bob-eyebrow--small {
+    margin-bottom: var(--token-4);
+    @include ellipsis;
+  }
+
+  .bob-h3 {
+    --lineheight: 32px;
+    margin-bottom: var(--token-8);
+  }
+
+  .bob-p {
+    --lineheight: 30px;
+    margin-bottom: 24px;
+  }
+
+  &--text-sm {
+
+    .bob-card__txt {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+      }
+    }
+
+    .bob-p {
+      margin-bottom: 24px;
+
+      @media screen and ( min-width: $md ) {
+        @include ellipsis;
+        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+
+}

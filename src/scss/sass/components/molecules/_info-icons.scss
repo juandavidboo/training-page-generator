@@ -1,0 +1,66 @@
+.bob-info-icons {
+  font-size: var(--fs-sm);
+  line-height: 16px;
+
+  span {
+    margin: 8px 16px 0 0;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      background-color: var(--color-pale-sky);
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+  }
+
+  .bob-info-icons__hours {
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      mask: var(--icon-clock); //url('components/assets/icon_16_clock.svg');
+      -webkit-mask: var(--icon-clock); //url('components/assets/icon_16_clock.svg');
+    }
+  }
+  .bob-info-icons__days {
+    padding-left: 20px;
+
+    &::before {
+      mask: var(--icon-calendar); //url('components/assets/icon_16_calendar.svg');
+      -webkit-mask: var(--icon-calendar); //url('components/assets/icon_16_calendar.svg');
+      width: 15px;
+    }
+  }
+  .bob-info-icons__selfpaced {
+    padding-left: 20px;
+
+    &::before {
+      mask: var(--icon-pc); //url('components/assets/icon_16_pc.svg');
+      -webkit-mask: var(--icon-pc); //url('components/assets/icon_16_pc.svg');
+      width: 15px;
+    }
+  }
+  .bob-info-icons__instructor {
+    padding-left: 20px;
+
+    &::before {
+      mask: var(--icon-user); //url('components/assets/icon_16_user.svg');
+      -webkit-mask: var(--icon-user); //url('components/assets/icon_16_user.svg');
+    }
+  }
+  .bob-info-icons__level {
+    padding-left: 28px;
+
+    &::before {
+      mask: var(--icon-level); //url('components/assets/icon_16_level.svg');
+      -webkit-mask: var(--icon-level); //url('components/assets/icon_16_level.svg');
+    }
+  }
+}

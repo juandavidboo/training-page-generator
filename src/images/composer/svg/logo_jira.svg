@@ -1,0 +1,22 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 76" width="74" height="76">
+	<title>logo_jira-svg</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="34.6" y1="15.3" x2="19" y2="31">
+			<stop offset=".2" stop-color="#0052cc"  />
+			<stop offset="1" stop-color="#2684ff"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="989.5" y1="2323.1" x2="1529.6" y2="1973">
+			<stop offset=".2" stop-color="#0052cc"  />
+			<stop offset="1" stop-color="#2684ff"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #2684ff } 
+		.s1 { fill: url(#grd1) } 
+		.s2 { fill: url(#grd2) } 
+	</style>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m73.28 37.88c0 0.79-0.32 1.56-0.88 2.12l-35.76 35.76l-13.34-13.34l-22.42-22.42c-0.56-0.56-0.88-1.33-0.88-2.12c0-0.8 0.32-1.56 0.88-2.12l11.22-11.22l24.54-24.54l35.76 35.76c0.56 0.56 0.88 1.33 0.88 2.12zm-25.44 0l-11.2-11.2l-11.2 11.2l11.2 11.2l11.2-11.2z" />
+	<path id="Layer" class="s1" d="m25.39 37.93l-13.34-13.34l24.51-24.5c-3.5 3.54-5.46 8.33-5.44 13.31c0.02 4.98 2 9.76 5.52 13.28l-11.25 11.25z" />
+	<path id="Layer" class="s2" d="m61.21 51.19l-24.57 24.57c1.75-1.75 3.14-3.83 4.09-6.12c0.95-2.29 1.44-4.74 1.44-7.22c0-2.48-0.49-4.93-1.44-7.22c-0.95-2.29-2.34-4.37-4.09-6.12l11.23-11.23l13.34 13.34z" />
+</svg>
