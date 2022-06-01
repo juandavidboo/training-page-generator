@@ -5,8 +5,8 @@
 
 
 @import 'sass/vendor/bootstrap';
-@import 'sass/vendor/owl/owl.carousel';
-@import 'sass/vendor/owl/owl.theme.default';
+//@import 'sass/vendor/owl/owl.carousel';
+//@import 'sass/vendor/owl/owl.theme.default';
 //@import 'sass/vendor/jquery-ui';
 
 
@@ -39,9 +39,11 @@
 @import 'sass/components/atoms/tag';
 @import 'sass/components/molecules/block-card';
 @import 'sass/components/molecules/info-icons';
+@import 'sass/components/organisms/banner';
 @import 'sass/components/organisms/zigzag';
 @import 'sass/components/organisms/header';
 @import 'sass/components/organisms/card';
+@import 'sass/components/organisms/card-wide';
 @import 'sass/components/organisms/benefit';
 //@import 'components/‹buttons';
 //@import 'components/carousel';
@@ -51,8 +53,9 @@
 
 //@import 'sass/pages/reference';
 //@import 'sass/pages/composer';
-@import 'sass/pages/home-test';
+//@import 'sass/pages/home-test';
 //@import 'sass/pages/contact';
+@import 'sass/pages/partnermax';
 
 
 //@import 'themes/theme';

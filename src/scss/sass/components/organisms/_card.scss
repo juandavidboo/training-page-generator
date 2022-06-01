@@ -2,18 +2,21 @@
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
   width: 100%;
-  margin-bottom: 24px; //40
-
-  position: relative; // link-cover
+  margin-bottom: 40px;
+  position: relative;
 
   transition: box-shadow 0.3s ease-in-out;
+
+  @media screen and ( min-width: $md) {
+    margin-bottom: 0;
+  }
 
   &:hover {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, .2);
     cursor: pointer;
   }
 
-  @media screen and ( min-width: $md ) {
+  .col-12:last-of-type & {
     margin-bottom: 0;
   }
 
@@ -22,14 +25,14 @@
     background-color: var(--color-white); 
   }
 
-  .bob-card__link-cover {
+  &__link-cover {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0px;
     top: 0px;
 
-    span {
+    > span {
       font-size: 0;
       opacity: 0;
     }
@@ -69,6 +72,10 @@
     margin-bottom: 40px;
   }
 
+  .bob-link {
+    //margin-top: 24px;
+  }
+
   &--text-sm {
     margin-bottom: 24px;
 
@@ -95,7 +102,7 @@
   }
 
   &--text-md {
-    //margin-bottom: 24px;
+    margin-bottom: 24px;
 
     .bob-card__txt {
       padding-top: 16px;
@@ -186,14 +193,13 @@
   }
 
   &--image {
-    margin-bottom: 24px;
 
     .bob-card__txt {
       padding-top: 16px;
     }
 
     .bob-h3 {
-      @media screen and ( min-width: $sm ) {
+      @media screen and ( min-width: $md ) {
         @include ellipsis;
         min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
         -webkit-line-clamp: 2;
@@ -201,7 +207,7 @@
     }
 
     .bob-p {
-      @media screen and ( min-width: $sm ) {
+      @media screen and ( min-width: $md ) {
         @include ellipsis;
         min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
         -webkit-line-clamp: 3;
@@ -238,6 +244,7 @@
   }
 
   &--course-image {
+    margin-bottom: 24px;
 
     .bob-card__img {
       background-color: var(--color-dark-navy);
@@ -247,7 +254,7 @@
 
       &:before {
         content: '';
-        background: url('https://www.mulesoft.com/training/assets/images/shared/patern_green_dots.svgz') no-repeat;
+        background: url('components/assets/patern_green_dots.svg') no-repeat;
         height: 104px;
         width: 148px;
     
@@ -290,8 +297,8 @@
       &.cert--mulesoft {
 
         &::before {
-          mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_handshake.svg') no-repeat;
-          -webkit-mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_handshake.svg') no-repeat;
+          mask: var(--icon-handshake) no-repeat;
+          -webkit-mask: var(--icon-handshake) no-repeat;
           left: 0px;
           top: 2px;
         }
@@ -300,8 +307,8 @@
       &.cert--community {
 
         &::before {
-          mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_ribbon.svg') no-repeat;
-          -webkit-mask: url('https://www.mulesoft.com/training/assets/images/shared/icon_24_ribbon.svg') no-repeat;
+          mask: var(--icon-ribbon) no-repeat;
+          -webkit-mask: var(--icon-ribbon) no-repeat;
           left: 0px;
           top: 0px;
         }
@@ -324,13 +331,13 @@
       }
 
       &.icon--document {
-        background-image: url('https://www.mulesoft.com/training/assets/images/shared/icon_lib_document.svgz');
+        background-image: url('components/assets/icon_lib_document.svg');
       }
       &.icon--minicourse {
-        background-image: url('https://www.mulesoft.com/training/assets/images/shared/icon_lib_course.svgz');
+        background-image: url('components/assets/icon_lib_course.svg');
       }
       &.icon--video {
-        background-image: url('https://www.mulesoft.com/training/assets/images/shared/icon_lib_video.svgz');
+        background-image: url('components/assets/icon_lib_video.svg');
       }
     }
 

@@ -5,6 +5,7 @@
   font-size: 1rem;
   text-decoration: none;
   line-height: 28px;
+  //display: inline-block;  
   cursor: pointer;
 
   &:focus {
@@ -36,6 +37,7 @@
   position: relative;
   padding-left: 38px;
   display: inline-block;
+  
 
   .bob-card:hover &, // hover on card triggers link hover
   &:hover {
@@ -45,14 +47,13 @@
       background-color: var(--color-dark-navy);
     }
   }
-  
+
   &::before {
     content: '';
     background-color: var(--color-ms-blue);
     border-radius: 50%;
     height: 28px;
     width: 28px;
-
     position: absolute;
     left: 0;
     top: 0;
@@ -74,8 +75,8 @@
   }
 
   &.play {
-    mask: url('components/assets/shape_btn_play.svg');
-    -webkit-mask: url('components/assets/shape_btn_play.svg');
+    mask: var(--icon-play); //url('components/assets/shape_btn_play.svg');
+    -webkit-mask: var(--icon-play); //url('components/assets/shape_btn_play.svg');
   }
 }
 

@@ -1,0 +1,135 @@
+.bob-card-wide {
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
+  width: 100%;
+  //margin-bottom: 40px;
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .2);
+    cursor: pointer;
+  }
+
+  &--col-swap > .row > [class^='col']:first-child { 
+
+    @media screen and (min-width: $md) {
+      order: 1;
+    }
+  }
+
+  &--col-swap {
+    & .bob-card-wide__txt{
+      @media screen and ( min-width: $md ) {
+        padding: 40px 16px 40px 40px;
+      }
+    }
+  }
+  
+  &__img {
+    overflow: hidden;
+    height: 260px;
+    
+    @media screen and ( min-width: $md ) {
+      height: 100%;
+    }
+      
+    img {
+      margin: unset;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+     
+    .image_desk {
+      display: none;
+
+      @media screen and (min-width: $md) {
+        display: block;
+      }
+    }
+    .image_mob {
+      @media screen and (min-width: $md) {
+        display: none;
+      }
+    }
+  }
+  
+  &__txt {
+    padding: 40px;
+
+    @media screen and ( min-width: $md ) {
+      padding: 40px 40px 40px 16px;
+    }
+  }
+
+  .bob-eyebrow--small {
+    margin-bottom: var(--token-4);
+    @include ellipsis;
+  }
+  
+  .bob-h3 {
+    --lineheight: 32px;
+    margin-bottom: var(--token-8);
+  }
+  
+  .bob-p {
+    --lineheight: 30px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+    
+  }
+  .bob-p + .bob-p {
+    margin-top: 24px;
+  }
+    
+  &--10col {
+
+    .col1 {
+
+      @media screen and ( min-width: $md ) {
+        width: 40%;    
+      }
+    }
+
+    .col2 {
+
+      @media screen and ( min-width: $md ) {
+        width: 60%;    
+      }
+    }
+
+    .bob-card-wide__txt {
+
+      .bob-eyebrow--small {
+        margin-bottom: 0;
+      }
+
+      .bob-h3 {
+        margin-bottom: 24px;
+      }
+    }
+
+  }
+
+  &--12col {
+
+    .bob-card-wide__txt {
+
+      /*@media screen and ( min-width: $md ) {
+        padding: 40px 32px;
+      }*/
+      
+      .bob-eyebrow--small {
+        margin-bottom: 0;
+      }
+
+      .bob-h3 {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+}

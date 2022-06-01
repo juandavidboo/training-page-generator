@@ -1,25 +1,215 @@
-<!--link href="https://www.mulesoft.com/training/assets/images/home/styles.css" rel="stylesheet" />-->
-<link rel="stylesheet" type="text/css" href="https://staging.training.mulesoft.com/cmsres-cdn/attachments/mulesoft-eb-agg.css?v=2">
-<script>
-    function removejscssfile(filename, filetype){
-    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
-    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
-    var allsuspects=document.getElementsByTagName(targetelement)
-    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
-    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
-        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
-    }
-  }
-  
-  //removejscssfile("somescript.js", "js") //remove all occurences of "somescript.js" on page
-  removejscssfile("mulesoft-eb-agg.css", "css") //remove all occurences "somestyle.css" on page
-</script>
-
 <main>
-  
-</main>
+  <div id="pm-home">
 
-<script src ="js/jquery.min.js"> </script>
-<script src ="js/bootstrap.min.js"> </script>
-<script src ="js/owl.carousel.min.js"> </script>
-<script src ="js/home-test.js"> </script>
+  <!-- header START -->
+  <section id="hero" class="container-fluid h-mb-80">
+    <div class="bob-header__bkg bkg-inverted--dark-navy">
+      <div class="container">
+        <article class="bob-header">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-10 col-md-6">
+              <div class="bob-header__text">
+                <h1 class="bob-h1">Accelerate your success to&nbsp;the&nbsp;<span class="bob-h1--color">Max</span></h1>
+                <p class="bob-p--large">Welcome to the PartnerMax Portal - your <span style="white-space: nowrap">one-stop-shop</span> for everything you need to grow your business, your influence, and your career with MuleSoft.</p>
+              </div>
+            </div>
+            <div class="col-10 col-md-5 offset-md-1">
+              <div class="bob-header__image" role="img" aria-label="">
+                <img src="images/pm-home/partnermax-home-banner-desktop.jpg" alt="" class="image_desk" width="612"><img src="images/pm-home/partnermax-home-banner-mobile.jpg" alt="" class="image_mob" width="796">
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- header END -->
+
+  <!-- roles START -->
+  <section id="roles" class="h-mb-80">
+    <div class="container">
+      <div class="row justify-content-center justify-content-sm-start align-items-top">
+        <h2 class="bob-h2">Role-based content</h2>
+      </div>
+      <div class="row justify-content-center justify-content-sm-start align-items-top">
+        <!-- roles grid START -->
+        <div class="roles-grid__contents col-12 col-lg-8">
+          <div class="row justify-content-center justify-content-sm-start align-items-center">
+            <div class="col-12 col-sm-6 col-md-6">
+              <!-- card START -->
+              <article class="bob-card bob-card--text-lg bob-card--border h-border--seaserpent">
+                <a href="" class="bob-card__link-cover"><span>View</span></a>
+                <div class="bob-card__txt">
+                  <span class="bob-eyebrow--small">Role-based content</span>
+                  <h3 class="bob-h3">Alliance & Sales</h3>
+                  <a href="" class="bob-link bob-link--carot "><span>View<br></span></a>
+                </div>
+              </article>
+              <!-- card END -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+              <!-- card START -->
+              <article class="bob-card bob-card--text-lg bob-card--border h-border--seaserpent">
+                <a href="" class="bob-card__link-cover"><span>View</span></a>
+                <div class="bob-card__txt">
+                  <span class="bob-eyebrow--small">Role-based content</span>
+                  <h3 class="bob-h3">Technical</h3>
+                  <a href="" class="bob-link bob-link--carot "><span>View</span></a>
+                </div>
+              </article>
+              <!-- card END -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+              <!-- card START -->
+              <article class="bob-card bob-card--text-lg bob-card--border h-border--seaserpent h-mb-0-sm">
+                <a href="" class="bob-card__link-cover"><span>View</span></a>
+                <div class="bob-card__txt">
+                  <span class="bob-eyebrow--small">Role-based content</span>
+                  <h3 class="bob-h3">Marketer</h3>
+                  <a href="" class="bob-link bob-link--carot "><span>View</span></a>
+                </div>
+              </article>
+              <!-- card END -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+              <!-- card START -->
+              <article class="bob-card bob-card--text-lg bob-card--border h-border--seaserpent h-mb-0-sm">
+                <a href="" class="bob-card__link-cover"><span>View</span></a>
+                <div class="bob-card__txt">
+                  <span class="bob-eyebrow--small">Role-based content</span>
+                  <h3 class="bob-h3">Delivery</h3>
+                  <a href="" class="bob-link bob-link--carot "><span>View</span></a>
+                </div>
+              </article>
+              <!-- card END -->
+            </div>
+          </div>
+        </div>
+        <!-- roles grid END -->
+
+        <div class="roles-grid__rowspan col-12 col-lg-4">
+          <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-lg-start">
+              <!-- signup button START -->
+              <article class="bob-block__signup">
+                <div>
+                  <a tabindex="0" href="#" class="bob-button bob-button--dark-navy home-button-signup">Signup for our <br>partner newsletter!</a>
+                </div>
+              </article>
+              <!-- signup button END -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- roles END -->
+
+  <!-- 3cards START -->
+  <section id="three-cards" class="h-mb-80">
+    <div class="container">
+      <div class="row justify-content-center justify-content-sm-start align-items-top">
+        <h2 class="bob-h2">Top of mind</h2>
+      </div>
+      <div class="row justify-content-center justify-content-sm-start align-items-center h-gradient-bkg-bubble-1">
+        <div class="col-12 col-md-4">
+          <!-- card START -->
+          <article class="bob-card bob-card--image ">
+            <a href="" class="bob-card__link-cover"><span>View</span></a>
+            <div class="bob-card__img">
+              <img src="images/pm-home/partnermax-card-partner-kickstart-journey.png" alt="">
+            </div>
+            <div class="bob-card__txt"><h3 class="bob-h3">NEW: Partner Kickstart Journey</h3>
+              <p class="bob-p">This self-guided training course will teach you all the key MuleSoft basics.</p>
+              <a href="#" class="bob-link bob-link--carot "><span>View</span></a>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+        <div class="col-12 col-md-4">
+          <!-- card START -->
+          <article class="bob-card bob-card--image ">
+            <a href="" class="bob-card__link-cover"><span>View</span></a>
+            <div class="bob-card__img">
+              <img src="images/pm-home/partnermax-card-uapim.png" alt="">
+            </div>
+            <div class="bob-card__txt">
+              <h3 class="bob-h3">Now Available: UAPIM</h3>
+              <p class="bob-p">Get to know MuleSoft Universal API Management and Flex Gateway.</p>
+              <a href="#" class="bob-link bob-link--carot "><span>View</span></a>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+        <div class="col-12 col-md-4">
+          <!-- card START -->
+          <article class="bob-card bob-card--image ">
+            <a href="" class="bob-card__link-cover"><span>View</span></a>
+            <div class="bob-card__img">
+              <img src="images/pm-home/partnermax-card-partner-kickoff-keynote.png" alt="">
+            </div>
+            <div class="bob-card__txt">
+              <h3 class="bob-h3">Partner Kickoff Keynote</h3>
+              <p class="bob-p">Watch the keynote from PKO22 to learn everything you need to know to thrive with MuleSoft.</p>
+              <a href="#" class="bob-link bob-link--carot "><span>View</span></a>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- 3cards END -->
+
+  <!-- wide-card START -->
+  <section id="wide-card" class="h-mb-80">
+    <div class="container">
+      <div class="row justify-content-center justify-content-sm-start h-gradient-bkg-bubble-2">
+        <div class="col-12">
+          <!-- card START -->
+          <article class="bob-card-wide bob-card-wide--12col bob-card-wide--col-swap">
+            <div class="row">
+              <div class="col-12 col-md-7">
+                <div class="bob-card-wide__img">
+                  <img src="images/pm-home/partnermax-ms-pm-desktop.png" alt="" class="image_desk">
+                  <img src="images/pm-home/partnermax-ms-pm-mobile.png" alt="" class="image_mob" width="796">
+                </div>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="bob-card-wide__txt">
+                  <span class="bob-eyebrow--small">PartnerMax intro video</span>
+                  <h3 class="bob-h3">Get to know PartnerMax</h3>
+                  <p class="bob-p">What is PartnerMax and how can it  help you grow your business, your influence, and your career?</p><a href="#" class="bob-link bob-link--carot "><span>View</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- wide-card END -->
+
+  <!-- banner START -->
+  <section id="banner" class="h-mb-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- banner START -->
+          <article class="bob-banner bkg-inverted--dark-navy align-items-center bkg--image">
+            <div class="bob-banner__texts">
+              <h2 class="bob-h2">Try Anypoint Platform for free</h2><a tabindex="0" href="#" class="bob-button    ">Learn more</a>
+            </div>
+          </article>
+          <!-- banner END -->
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- banner END -->
+  
+  </div>
+</main>

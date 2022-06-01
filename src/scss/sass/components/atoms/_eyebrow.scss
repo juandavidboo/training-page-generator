@@ -17,4 +17,8 @@
       //  color: var(--color-pale-sky);
       //}
   }
+
+  .bkg-inverted--dark-navy & {
+    color: var(--color-white);
+  }
 }
