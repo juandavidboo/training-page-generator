@@ -4,59 +4,68 @@
 
 
 
-@import 'sass/vendor/bootstrap';
-//@import 'sass/vendor/owl/owl.carousel';
-//@import 'sass/vendor/owl/owl.theme.default';
-//@import 'sass/vendor/jquery-ui';
-
+@import 'sass/vendor/bootstrap',
+'sass/vendor/owl/owl.carousel',
+'sass/vendor/owl/owl.theme.default';
+//'sass/vendor/jquery-ui';
 
 
 @import 'sass/abstracts/variables';
+@import '../../node_modules/@salesforce-ux/wes-styling-hooks/dist/font.custom-props';
+
 //@import 'sass/abstracts/functions';
 @import 'sass/abstracts/mixins';
-@import 'sass/abstracts/helpers';
 
 
+@import 'sass/base/reset',
+'sass/base/typography',
+// 'sass/base/forms',
+'sass/abstracts/helpers';
 
 
-@import 'sass/base/reset';
-@import 'sass/base/typography';
-//@import 'sass/base/forms';
-
-
-//@import 'sass/layout/navigation';
-//@import 'sass/layout/grid';
-//@import 'sass/layout/header';
-//@import 'sass/layout/footer';
-//@import 'sass/layout/sidebar';
-//@import 'sass/layout/forms';
+//@import 'sass/layout/navigation',
+//'sass/layout/grid',
+//'sass/layout/header',
+//'sass/layout/footer',
+//'sass/layout/sidebar'
+//'sass/layout/forms';
 
 
 //@import 'sass/components/atoms/paragraph';
-@import 'sass/components/atoms/links';
-@import 'sass/components/atoms/eyebrow';
-@import 'sass/components/atoms/badge';
-@import 'sass/components/atoms/tag';
-@import 'sass/components/molecules/block-card';
-@import 'sass/components/molecules/info-icons';
-@import 'sass/components/organisms/banner';
-@import 'sass/components/organisms/zigzag';
-@import 'sass/components/organisms/header';
-@import 'sass/components/organisms/card';
-@import 'sass/components/organisms/card-wide';
-@import 'sass/components/organisms/benefit';
-//@import 'components/‹buttons';
-//@import 'components/carousel';
-//@import 'components/cover';
-//@import 'components/dropdown';
+@import
+'sass/components/atoms/links',
+'sass/components/atoms/eyebrow',
+'sass/components/atoms/badge',
+'sass/components/atoms/tag',
+'sass/components/atoms/lists',
+'sass/components/molecules/block-card',
+'sass/components/molecules/info-icons',
+'sass/components/organisms/banner',
+'sass/components/organisms/zigzag',
+'sass/components/organisms/cards-row',
+'sass/components/organisms/header',
+'sass/components/organisms/card',
+'sass/components/organisms/card-wide',
+'sass/components/organisms/benefit';
 
 
-//@import 'sass/pages/reference';
-//@import 'sass/pages/composer';
-//@import 'sass/pages/home-test';
-//@import 'sass/pages/contact';
-@import 'sass/pages/partnermax';
+// IMPORTANT!!!!! fixes EduBrite's Bootstrap issues
+@import 'sass/vendor/edubrite';
 
 
-//@import 'themes/theme';
-//@import 'themes/admin';
+//pages
+@import
+'sass/pages/composer',
+'sass/pages/rpa',
+'sass/pages/courses',
+'sass/pages/home-test',
+'sass/pages/certober',
+'sass/pages/overview',
+// 'sass/pages/summer-ocm';
+'sass/pages/pilot-mvp';
+// 'sass/pages/contact';
+// 'sass/pages/partnermax';
+
+//Salesforce update
+@import 'sass/vendor/salesforce';
+

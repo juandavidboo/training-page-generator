@@ -1,17 +1,7 @@
-// Removing ARIA tool from staging
-#INDWrap, .eb-page-banner.eb-breadcrumb-only {
-  display: none !important;
-}
-
-// Remove help and Stormbreaker
-
-#launcher {
-  display: none !important;
-}
-
-#stormbreaker {
-  display: none !important;
-}
+/*a[href="#"], a[href=""] {
+  color: #EA001E !important;
+  border: 1px solid #EA001E !important;
+}*/
 
 
 #home-test {
@@ -20,14 +10,14 @@
 
   // Focus styling
 
-  :focus, [tabindex="0"]:focus {
+  /*:focus, [tabindex="0"]:focus {
     outline-color: #D71EF7;
     outline: 1px solid #D71EF7 !important;
   }
 
-  .accordion-button:focus, #home-test #faq .accordion-item:first-of-type .accordion-button:focus {
+  .accordion-button:focus, #home-test .faq .accordion-item:first-of-type .accordion-button:focus {
     box-shadow: 0 0 0 2px rgb(215, 30, 247, 100%);
-  }
+  }*/
 
   // Display helpers
 
@@ -35,86 +25,7 @@
     display: none;
   }
 
-  .hidden-lg {
-    @media screen and ( min-width: $md ) {
-      display: none;
-    }
-  }
 
-  .show-lg {
-    @media screen and ( min-width: $md ) {
-      display: block;
-    }
-  }
-
-  // margin helpers
-
-  .spaced-120 {
-    > * {
-      margin-bottom: 120px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .h-mb-0 {
-    margin-bottom: 0;
-  }
-
-  .h-mb-66 {
-    margin-bottom: 66px;
-  }
-
-  .h-mb-36 {
-    margin-bottom: 36px;
-  }
-
-  .h-mb-40 {
-    margin-bottom: 40px;
-  }
-
-  .h-mb-48 {
-    margin-bottom: 48px;
-  }
-
-  .h-mb-56 {
-    margin-bottom: 56px;
-  }
-
-  .h-mb-60 {
-    margin-bottom: 60px;
-  }
-
-  .h-mb-64 {
-    margin-bottom: 64px;
-  }
-
-  .h-mb-80 {
-    margin-bottom: 80px;
-  }
-
-  .h-mb-108 {
-    margin-bottom: 108px;
-  }
-
-  .h-mb-0-md {
-    @media screen and ( min-width: $md ) {
-      margin-bottom: 0;
-    }
-  }
-
-  .h-mt-120-tabs-bp {
-
-    @media screen and ( min-width: $md ) {
-      margin-top: 120px;
-    }
-  }
-
-  .scroll-margin {
-    scroll-margin-top: 80px;
-  }
 
   // Font size _helpers
 
@@ -122,45 +33,14 @@
     font-size: var(--fs-xs); //12px
   }
 
-  .--fs-md-28 {
+  .--fs-md-32 {
     
     @media screen and ( min-width: $md ) {
-      font-size: 28px;
+      font-size: 32px;
     }
   }
 
-  // Container replacement fix
-  #eb-my-items-section > .container-fluid {
-    padding: 0; // make it 100% wide
-    overflow: hidden; // instead of margin reset on child row from margin -8px
 
-  }
-
-  // missing links finder
-  a[href="#"] {
-    color: #b11818 !important;
-  }
-
-
-  .bob-link {
-    color: 	var(--color-navy);
-  }
-
-  .bob-link--carot::before {
-    background-color: var(--color-navy);
-  }
-
-  .bob-button {
-    background-color: var(--color-navy);
-    border: 1px solid var(--color-navy);
-
-
-    &:hover {
-      background-color: var(--color-white);
-      color: var(--color-navy);
-      border: 1px solid var(--color-navy);
-    }
-  }
 
   // Owl carousel component overwrite
 
@@ -174,15 +54,26 @@
     background: #002196;
   }
 
-  #hero {
+  .hero {
+
+    @media screen and ( min-width: $lg ) {
+      margin-top: 40px;
+    }
+
     .bob-header__image {
       overflow: unset;
+
+      img {
+        width: auto;
+      }
     }
   }
 
-  #hero-cards{}
+  .hero-cards{
+    --color-magenta: #BF007D;
+  }
 
-  #learning-path {
+  .learning-path {
 
     // carousel LEARNING-PATH
 
@@ -229,6 +120,85 @@
         .--fs-md-22 {
           @media screen and ( min-width: $md ) {
             font-size: 22px;
+          }
+        }
+
+        .magenta-li {
+          list-style: none;
+          counter-reset: li;
+          padding-left: 0;
+          margin-bottom: 50px;
+          text-align: left;
+          width: fit-content;
+          margin: 0 auto;
+
+          @media screen and ( min-width: $lg ) {
+            margin: 0;
+          }
+          
+          li.circle-num {
+            counter-increment: li;
+            font-family: var(--ff-avantgarde);
+            font-family: var(--wes-g-font-family-display);
+            font-size: var(--wes-g-font-size-1);
+            font-weight: medium;
+            line-height: 28px;
+            margin-bottom: 36px;
+            position: relative;
+            
+            &:last-of-type {
+              &::before {
+                background: none;
+              }
+
+            }
+            
+            &::before {
+              content: "";
+              background: url('https://www.mulesoft.com/training/assets/images/shared/bkg_list_red_dots.svg');
+              background-repeat: no-repeat;
+              background-position: center center;
+              height: 22px;
+              width: 100%;
+              width: 28px;
+              position: absolute;
+              left: 0;
+              top: 35px;
+              
+              @media screen and ( min-width: $lg ) {
+              }
+            }
+            
+            > span {
+              display: inline-block;
+              line-height: 28px;
+              padding-left: 36px;
+              position: relative;
+
+              &::before {
+                content: "";
+                background-color: #BF007D;
+                border-radius: 50%;
+                height: 28px;
+                width: 28px;
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+  
+              &::after {
+                content: counter(li);
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                display: inline-block;
+                width: 28px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                line-height: 30px; //28px;
+              }
+            }
           }
         }
       }
@@ -278,15 +248,15 @@
     // END carousel LEARNING-PATH
   }
 
-  #benefits {
+  .benefits {
     .bob-benefit {
       margin-bottom: 60px;
     }
   }
 
-  //#zigzags {}
+  //.zigzags {}
 
-  #training-tabcordion {
+  .training-tabcordion {
 
     // Tabs/accordion
 
@@ -305,6 +275,8 @@
     
     .ootb-tabcordion {
       max-width: 100%;
+      font-family: var(--ff-sf-sans);
+
       &.has-tabs {
         .ootb-tabcordion--tabs {
           border-bottom: 1px solid #bdbdbd;
@@ -595,24 +567,7 @@
     #quote-slider__carousel{
       
       &::before {
-        content: '';
-        //background: url(https://training.mulesoft.com/oltpublish/cmsres/images/quote_brand_pattern-mob.svg) no-repeat center top;
-        //background: url(https://training.mulesoft.com/oltpublish/cmsres/images/customer-quote-brand-pattern-desktop.svg) repeat-x center top;
-        //position: absolute;
-        //height: 204px;
-        //width: 94%;
-        //top: 40px;
-        //right: 3%;
-        //left: 3%;
-  
-        //@media screen and ( min-width: $sm ) {
-        //  height: 250px;
-        //  width: 80%;
-        //  top: 30px;
-        //  right: 10%;
-        //  left: 10%;
-        //}
-  
+        content: '';  
   
         @media screen and ( min-width: $md ) {
           background: url(https://training.mulesoft.com/oltpublish/cmsres/images/customer-quote-brand-pattern-desktop.svg) repeat-x center top;
@@ -624,17 +579,6 @@
           left: 73%;
         }
       }
-    }
-
-
-    .carousel-inner {
-      //-webkit-transition: max-height 1s; 
-      //-moz-transition: max-height 1s; 
-      //-ms-transition: max-height 1s; 
-      //-o-transition: max-height 1s; 
-      //transition: max-height 1s;  
-      //height:auto;
-      //max-height:1000px;
     }
 
     .carousel-item {
@@ -681,7 +625,7 @@
         content: '';
         width: 70px;
         height: 47px;
-        background: url(https://training.mulesoft.com/oltpublish/cmsres/images/quote-img.svg) no-repeat left top;
+        background: url(https://www.mulesoft.com/training/assets/images/shared/bkg_quote_blue_double.svg) no-repeat left top;
 
         @media screen and ( min-width: $sm ) {
           left: -28px;
@@ -690,23 +634,20 @@
 
       blockquote {
         font-family: var(--ff-head);
+        font-family: var(--ff-avantgarde);
         font-weight: bold;
-        //font-size: var(--fs-h3); // 33px
-        //line-height: 2rem; // 44px
         font-size: var(--fs-h2); // 33px
+        font-size: 32px; // 33px
         line-height: 2.75rem; // 44px
+        line-height: 1.33; // 44px
         margin: 0 0 32px 0;
-
-        //@media screen and ( min-width: $sm ) {
-        //  font-size: var(--fs-h2); // 33px
-        //  line-height: 2.75rem; // 44px
-        //}
 
         @media screen and ( min-width: $lg ) {
           margin: 0 0 64px 0;
         }
       }
       figcaption {
+        font-family: var(--ff-sf-sans);
         font-size: 16px;
         line-height: 30px;
 
@@ -740,7 +681,7 @@
           left: 0px;
           position: absolute;
           opacity: 1;
-          background-color: #00A0DF;
+          background-color: #002196;
           transition: all 0s linear;
         }
 
@@ -769,7 +710,6 @@
         width: 58px;
         height: 58px;
         top: 100%;
-        //bottom: inherit;
         opacity: 1;
       }
 
@@ -804,7 +744,7 @@
         mask-size: 14px 20px;
         mask-repeat: no-repeat;
         mask-position: 24px center;
-        background-color: var(--color-ms-blue);
+        background-color: var(--color-navy);
         height: 58px;
         width: 58px;
 
@@ -841,7 +781,7 @@
     }
   }
 
-  #brands {
+  .brands {
     overflow: hidden;
 
     // carousel BRANDS
@@ -873,7 +813,7 @@
     }
   }
 
-  #faq {
+  .faq {
     overflow: auto;
 
     .bob-h2 {

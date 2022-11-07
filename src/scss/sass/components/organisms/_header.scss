@@ -2,7 +2,7 @@
 
   &.bkg-gradient--lt-gray {
     position: relative;
-    $margin-token: 6.25em; //10em;
+    $margin-token: 100px; //10em;
     margin-bottom: $margin-token;
     text-align: center;
 
@@ -18,8 +18,7 @@
       bottom: -100px; //-180px;
       height: 100px;
       width: 100%;
-      //background: url('https://www.mulesoft.com/training/assets/images/composer/bkg-gradient-b_squeeze.png') repeat-x top left;
-      //background: rgb(243,248,251);
+      background: rgb(243,248,251);
       background: linear-gradient(180deg, rgba(233,242,245,1) 0%, rgba(233,242,245,0) 100%); // #E9F2F5
     }
 
@@ -65,13 +64,13 @@
   }
 
   &__text {
-    margin-top: 40px;
+    margin: 40px 0 48px 0;
     line-height: 0;
-    text-align: center;
+    text-align: left;
     
-    @media screen and ( min-width: $md ) {
+    /*@media screen and ( min-width: $md ) {
       margin-top: 0;
-    }
+    }*/
     
     @media screen and ( min-width: $md ) {
       text-align: left;
@@ -91,7 +90,6 @@
   }
 
   .bob-button + .bob-button {
-    margin-top: 24px;
     
     @media screen and ( min-width: $md ) {
       //margin: 0;

@@ -14,13 +14,14 @@
 /// Preventing Overflow with Ellipsis
 /// @example @include ellipsis;
 
-@mixin ellipsis() {
+@mixin ellipsis($lines:1) {
   overflow: hidden;
   text-overflow: ellipsis;
-  
+
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: $lines;
+  min-height: calc( var(--lineheight) * #{$lines} );
   //white-space: nowrap;
 }
 

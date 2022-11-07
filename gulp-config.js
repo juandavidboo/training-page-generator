@@ -40,7 +40,8 @@ module.exports = {
   },
   buildStyles: {
     // Sorting type css media queries: 'desktop-first' || 'mobile-first'
-    sortType: 'desktop-first',
+    sortType: 'mobile-first',
+    // sortType: 'desktop-first',
   },
   buildJs: {
     externalLibs: {},
@@ -83,5 +84,5 @@ module.exports = {
   },
   isFixJs() {
     return process.argv[process.argv.length - 1] === this.task.fixJs;
-  }
+  },
 };

@@ -1,3 +1,59 @@
 .bob-badge {
-  
+  color: var(--color-pale-sky);
+  font-family: var(--ff-head);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 14px;
+  display: inline-block;
+  line-height: 25px;
+  min-height: 28px;
+  margin-bottom: 12px;
+  padding: 3px 16px 0 16px;
+
+  &--color-magenta {
+    color: var(--color-white);
+    background-color: var(--color-magenta);
+
+    &-inverted {
+      color: var(--color-magenta);
+      background-color: rgba(229, 0, 151, 0.1);
+    }
+  }
+  &--color-viridian {
+    color: var(--color-white);
+    background-color: var(--color-viridian);
+    
+    &-inverted {
+      color: var(--color-viridian);
+      background-color: rgba(0, 179, 156, 0.1);
+    }
+  }
+  &--color-orange {
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    
+    &-inverted {
+      color: var(--color-orange);
+      background-color: rgba(233, 112, 0, 0.1);
+    }
+  }
+  &--color-indigo {
+    color: var(--color-white);
+    background-color: var(--color-indigo);
+    
+    &-inverted {
+      color: var(--color-indigo);
+      background-color: rgba(94, 102, 249, 0.1);
+    }
+  }
+  &--color-purple {
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    
+    &-inverted {
+      color: var(--color-purple);
+      background-color: rgba(149, 0, 219, 0.1);
+    }
+  }
 }

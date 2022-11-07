@@ -1,0 +1,115 @@
+#courses {
+
+  .bob-header-swoop {
+    .bob-header__text {
+      margin-top: 80px;
+      margin-bottom: 120px;
+
+      @media screen and ( min-width: $sm ) {
+        margin-bottom: 160px;
+      }
+
+      .bob-p--large {
+        font-size: 1rem;
+
+        @media screen and ( min-width: $sm ) {
+          font-size: 1.375rem;
+        }
+      }
+    }
+    .swoop {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 0;
+      height: 120px;
+
+      @media screen and ( min-width: $sm ) {
+        height: 160px;
+      }
+    }
+  }
+
+  .cards {
+
+    .cards-cols {
+      align-items: stretch;
+      > div {
+        display: flex;
+      }
+
+    }
+    .bob-card--text {
+      .bob-h3{
+        -webkit-line-clamp: 4;
+        min-height: auto;
+        margin-bottom: 16px;
+      }
+      .bob-p{
+        -webkit-line-clamp: 4;
+        min-height: auto;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .shown {
+    display: block;
+  }
+
+
+
+
+  // last items' row margin-bottom removal
+
+  .lg-last-4 {
+    > div:last-child {
+      .bob-benefit {
+        //background-color: red;
+        margin-bottom: 0;
+      }
+    }
+    @media screen and ( min-width: $md ) {
+      > div:nth-child(4n+1):nth-last-child(-n+4),
+      > div:nth-child(4n+1):nth-last-child(-n+4) ~ div {
+        //background-color: red;
+        .bob-benefit {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .lg-last-3 {
+    > div:last-child {
+      .bob-card {
+        //background-color: red;
+        margin-bottom: 0;
+      }
+    }
+    @media screen and ( min-width: $md ) {
+      > div:nth-child(3n+1):nth-last-child(-n+3),
+      > div:nth-child(3n+1):nth-last-child(-n+3) ~ div {
+        //background-color: red;
+        .bob-card {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.composer-sf {
+  .bob-card {
+    .bob-h3 {
+      @media screen and ( min-width: $lg ) {
+        min-height: calc( var(--lineheight) * 3 ) !important;  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3 !important;
+      }
+    }
+  }
+
+}

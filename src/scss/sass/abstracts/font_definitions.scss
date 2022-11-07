@@ -1,0 +1,100 @@
+@font-face {
+  font-family:Salesforce Sans;
+  src:url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff) format("woff");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:Salesforce Sans;
+  src:url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.woff) format("woff");
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:Salesforce Icons;
+  src:local("Salesforce Icons"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/salesforce-icons.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/salesforce-icons.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/salesforce-icons.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/salesforce-icons.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/salesforce-icons.svg#icomoon) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap
+}
+
+@font-face {
+  font-family:SalesforceSansBold;
+  src:local("SalesforceSansBold"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Bold.svg#SalesforceSansBold) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:SalesforceSansBoldItalic;
+  src:local("SalesforceSansBoldItalic"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-BoldItalic.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-BoldItalic.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-BoldItalic.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-BoldItalic.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-BoldItalic.svg#SalesforceSansBoldItalic) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+  
+@font-face {
+  font-family:SalesforceSansItalic;
+  src:local("SalesforceSansItalic"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Italic.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Italic.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Italic.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Italic.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Italic.svg#SalesforceSansItalic) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:SalesforceSansLight;
+  src:local("SalesforceSansLight"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Light.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Light.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Light.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Light.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Light.svg#SalesforceSansLight) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:SalesforceSansLightItalic;
+  src:local("SalesforceSansLightItalic"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-LightItalic.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-LightItalic.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-LightItalic.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-LightItalic.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-LightItalic.svg#SalesforceSansLightItalic) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:SalesforceSansRegular;
+  src:local("SalesforceSansRegular"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.svg#SalesforceSansRegular) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:SalesforceSansThin;
+  src:local("SalesforceSansThin"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Thin.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Thin.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Thin.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Thin.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Thin.svg#SalesforceSansThin) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:SalesforceSansThinItalic;
+  src:local("SalesforceSansThinItalic"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-ThinItalic.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-ThinItalic.woff) format("woff"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-ThinItalic.ttf) format("truetype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-ThinItalic.eot?#iefix) format("embedded-opentype"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-ThinItalic.svg#SalesforceSansThinItalic) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde';
+  src:url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/AvantGarde-Demi.woff2) format("woff2"),url(https://www.salesforce.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/AvantGarde-Demi.woff) format("woff");
+  font-weight:600;
+  font-style:normal;
+  font-display:swap
+}
+
+  /* System font stack for your application. */
+  --c360-g-font-family-display: 'ITC Avant Garde', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  /* System font stack for your application. */
+  --c360-g-font-family-sans: 'Salesforce Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

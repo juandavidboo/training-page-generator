@@ -1,43 +1,41 @@
 .bob-card {
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
+  border-radius: 16px;
   width: 100%;
   margin-bottom: 40px;
   position: relative;
 
   transition: box-shadow 0.3s ease-in-out;
 
-  @media screen and ( min-width: $md) {
-    margin-bottom: 0;
-  }
-
   &:hover {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, .2);
     cursor: pointer;
   }
 
-  .col-12:last-of-type & {
-    margin-bottom: 0;
+  &.bob-card--no-hover:hover {
+    cursor: default;
   }
 
   &.bob-card--border {
-    border-width: 5px 0 0 0;
-    background-color: var(--color-white); 
-  }
-
-  &__link-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
+    border-width: 8px 0 0 0;
+    border-radius: 8px;
+    background-color: var(--color-white);
 
     > span {
       font-size: 0;
       opacity: 0;
     }
   }
-  
+
+  /*&__link-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+  }*/
+
   &__img {
     overflow: hidden;
     
@@ -55,25 +53,71 @@
 
   &__txt {
     padding: 32px;
+    // same height between cards
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // same height between cards END
+
+    .bob-link--carot, .bob-link--arrow {
+      margin-top: auto;
+    }
+
+    .bob-link--carot + .bob-link--carot {
+      margin-top: 8px;
+    }
+
+    .bob-link--arrow + .bob-link--arrow {
+      margin-top: 8px;
+    }
   }
 
   .bob-eyebrow--small {
-    margin-bottom: var(--token-4);
-    @include ellipsis;
+    margin-bottom: var(--token-8);
   }
 
   .bob-h3 {
     --lineheight: 32px;
     margin-bottom: var(--token-8);
+
+    @media screen and ( min-width: $md ) {
+      //@include ellipsis;
+    }
   }
 
   .bob-p {
     --lineheight: 30px;
+    --lineheight: 24px;
     margin-bottom: 40px;
+
+    .bob-link {
+      line-height: 24px;
+      text-decoration: underline;
+    }
   }
 
-  .bob-link {
-    //margin-top: 24px;
+  &--text {
+
+    .bob-h3 {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis (3);
+      }
+
+      @media screen and ( min-width: $lg ) {
+        @include ellipsis (2);
+      }
+    }
+
+    .bob-p {
+      @media screen and ( min-width: $md ) {
+        @include ellipsis (4);
+      }
+
+      @media screen and ( min-width: $lg ) {
+        @include ellipsis (3);
+      }
+    }
   }
 
   &--text-sm {
@@ -84,24 +128,16 @@
       padding-bottom: 16px;
     }
 
-    .bob-h3 {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-      }
-    }
-
     .bob-p {
       margin-bottom: 24px;
 
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 2;
+        @include ellipsis (2); //minimum height is equivalent to twice the P line height (--lineheight * 2)
       }
     }
   }
 
-  &--text-md {
+  /*&--text-md {
     margin-bottom: 24px;
 
     .bob-card__txt {
@@ -109,25 +145,15 @@
       padding-bottom: 16px;
     }
 
-    .bob-h3 {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-      }
-    }
-
     .bob-p {
       margin-bottom: 24px;
 
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 3;
+        @include ellipsis (3);
       }
 
       @media screen and ( min-width: $lg ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 2;
+        @include ellipsis (2);
       }
     }
   }
@@ -140,57 +166,14 @@
       padding-bottom: 16px;
     }
 
-    .bob-h3 {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-      }
-    }
-
     .bob-p {
       margin-bottom: 24px;
 
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 4;
-      }
-
-      @media screen and ( min-width: $lg ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 4;
+        @include ellipsis (4);
       }
     }
-  }
-
-  &--text {
-
-    .bob-h3 {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 3;
-      }
-
-      @media screen and ( min-width: $lg ) {
-        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 2;
-      }
-    }
-
-    .bob-p {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 4;
-      }
-
-      @media screen and ( min-width: $lg ) {
-        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 3;
-      }
-    }
-  }
+  }*/
 
   &--image {
 
@@ -199,18 +182,14 @@
     }
 
     .bob-h3 {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 2;
+      @media screen and ( min-width: $sm ) {
+        @include ellipsis (2);
       }
     }
 
     .bob-p {
-      @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 3;
+      @media screen and ( min-width: $sm ) {
+        @include ellipsis (3);
       }
 
     }
@@ -219,26 +198,17 @@
   &--course {
     margin-bottom: 24px;
 
-    .bob-card__txt {
-      //padding-bottom: 16px;
-    }
-
     .bob-h3 {
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 2;
+        @include ellipsis (2);
       }      
     }
-
 
     .bob-p {
       //margin-bottom: 0px;
 
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 4;
+        @include ellipsis (4);
       }
     }
   }
@@ -267,81 +237,80 @@
         height: 160px;
       }
 
-    .bob-card__cert {
-      color: var(--color-white);
-      font-family: var(--font-head);
-      font-size: var(--fs-xs);
-      font-weight: 700;
-      line-height: 24px;
-      text-transform: uppercase;
-      
-      display: inline-block;
-      height: 24px;
-      margin: 16px 0 0 16px;
-      padding-left: 32px;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      &::before {
-        content: '';
-        mask-size: cover;
-        -webkit-mask-size: cover;
-        background-color: var(--color-white);
-
+      .bob-card__cert {
+        color: var(--color-white);
+        font-family: var(--font-head);
+        font-size: var(--fs-xs);
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+        
+        display: inline-block;
         height: 24px;
-        width: 24px;
+        margin: 16px 0 0 16px;
+        padding-left: 32px;
         position: absolute;
-      }
-
-      &.cert--mulesoft {
+        top: 0;
+        left: 0;
 
         &::before {
-          mask: var(--icon-handshake) no-repeat;
-          -webkit-mask: var(--icon-handshake) no-repeat;
-          left: 0px;
-          top: 2px;
+          content: '';
+          mask-size: cover;
+          -webkit-mask-size: cover;
+          background-color: var(--color-white);
+
+          height: 24px;
+          width: 24px;
+          position: absolute;
+        }
+
+        &.cert--mulesoft {
+
+          &::before {
+            mask: var(--icon-handshake) no-repeat;
+            -webkit-mask: var(--icon-handshake) no-repeat;
+            left: 0px;
+            top: 2px;
+          }
+        }
+
+        &.cert--community {
+
+          &::before {
+            mask: var(--icon-ribbon) no-repeat;
+            -webkit-mask: var(--icon-ribbon) no-repeat;
+            left: 0px;
+            top: 0px;
+          }
         }
       }
 
-      &.cert--community {
+      .bob-card__icon{
+        background-repeat: no-repeat;
+        background-position: 90% center;
+        background-size: 100%;
+        display: inline-block;
+        padding-top: 44%;
+        width: 33%;
+        max-width: 122px;
+        margin-right: 10%;
 
-        &::before {
-          mask: var(--icon-ribbon) no-repeat;
-          -webkit-mask: var(--icon-ribbon) no-repeat;
-          left: 0px;
-          top: 0px;
+        @media screen and ( min-width: 360px ) {
+          padding-top: 0;
+          height: 160px;
+        }
+
+        &.icon--document {
+          background-image: url('components/assets/icon_lib_document.svg');
+        }
+        &.icon--minicourse {
+          background-image: url('components/assets/icon_lib_course.svg');
+        }
+        &.icon--video {
+          background-image: url('components/assets/icon_lib_video.svg');
         }
       }
     }
-
-    .bob-card__icon{
-      background-repeat: no-repeat;
-      background-position: 90% center;
-      background-size: 100%;
-      display: inline-block;
-      padding-top: 44%;
-      width: 33%;
-      max-width: 122px;
-      margin-right: 10%;
-
-      @media screen and ( min-width: 360px ) {
-        padding-top: 0;
-        height: 160px;
-      }
-
-      &.icon--document {
-        background-image: url('components/assets/icon_lib_document.svg');
-      }
-      &.icon--minicourse {
-        background-image: url('components/assets/icon_lib_course.svg');
-      }
-      &.icon--video {
-        background-image: url('components/assets/icon_lib_video.svg');
-      }
-    }
-
-  }
     
     .bob-card__txt {
       padding-top: 16px;
@@ -349,17 +318,13 @@
 
     .bob-h3 {
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 2;
+        @include ellipsis (2);
       }      
     }
 
     .bob-p {
       @media screen and ( min-width: $md ) {
-        @include ellipsis;
-        min-height: calc( var(--lineheight) * 4 );  // minimum height is equivalent to twice the P line height
-        -webkit-line-clamp: 4;
+        @include ellipsis (4);
       }
 
     }

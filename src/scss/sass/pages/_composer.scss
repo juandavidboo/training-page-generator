@@ -1,139 +1,142 @@
-.eb-section {
-  padding: 64px 0;
-}
-/* help widget */
-//auncher {
-//bottom: 57px !important;
-//@media screen and (min-width: $md) {
-//  bottom: 65px !important;
-//}
-//
-//&.above-st {
-//  bottom: 173px !important;
-//  @media screen and (min-width: $md) {
-//    bottom: 197px !important;
-//  }
-//  @media screen and (min-width: 1160px) {
-//    bottom: 274px !important;
-//  }
-//}
-//}
+#composer {
 
-/* help widget */
 
-#INDWrap, .eb-page-banner.eb-breadcrumb-only {
-  display: none !important;
-}
+  .cards-3-cols {}
+  .pills-4-cols {}
 
-.hidden {
-  display: none;
-}
+  .hidden {
+    display: none;
+  }
 
-.scroll-margin {
-  scroll-margin-top: 65px;
-}
+  .shown {
+    display: block;
+  }
 
-#eb-my-items-section > .container-fluid {
-  padding: 0; // make it 100% wide
-  overflow: hidden; // instead of margin reset on child row from margin -8px
+  .bob-benefit {
+    margin-bottom: 64px;
+  }
 
-  & > .row {
-    //margin: 0; // remove horizontal scroll from margin -8px
+  .img--pill-block {
+    position: relative;
+    width: 250px;
+    max-width: 100%;
+    margin: 0 auto;
 
-    & > .col-12 {
-      //padding: 0;
+    &::before {
+      content: '';
+      background-color: white;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 5em;
+      width: 250px;
+      max-width: 100%;
+      padding-bottom: 36%; //250:90
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+    &::after {
+      content: '';
+      background: url('https://www.mulesoft.com/training/assets/images/composer/svg/shape_3dots.svg') no-repeat 50%;
+      background-size: 13.6%;
+      width: 250px;
+      max-width: 100%;
+      padding-bottom: 36%; //250:90
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+
+    .pill-block__height {
+      width: 250px;
+      max-width: 100%;
+      padding-bottom: 52%; //250:130
+
+      .logos-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 69.2%; //130:90
+        top: 10px;
+      }
+
+      .logo_left {
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+
+        img {
+          margin-right: 4%;
+        }
+      }
+      .logo_right {
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+
+        img {
+          margin-left: 4%;
+        }
+      }
+
+      img {
+        height: 80%;
+        padding-top: 20%;
+        max-width: 65%;
+      }
     }
   }
-}
 
 
-//spacers
-
-.--top-m2x {
-  margin-top: calc(var(--spacing-md) * 2);
-}
-.--bottom-m2x {
-  margin-bottom: calc(var(--spacing-md) * 2);
-}
-.--vertical-m2x {
-  margin-top: calc(var(--spacing-md) * 2);
-  margin-bottom: calc(var(--spacing-md) * 2);
-}
-.--top-m3x {
-  margin-top: calc(var(--spacing-md) * 3);
-}
-.--bottom-m3x {
-  margin-bottom: calc(var(--spacing-md) * 3);
-}
-.--vertical-m3x {
-  margin-top: calc(var(--spacing-md) * 3);
-  margin-bottom: calc(var(--spacing-md) * 3);
-}
-.--top-m4x {
-  margin-top: calc(var(--spacing-xl) * 2);
-}
-.--bottom-m4x {
-  margin-bottom: calc(var(--spacing-xl) * 2);
-}
-.--vertical-m4x {
-  margin-top: calc(var(--spacing-xl) * 2);
-  margin-bottom: calc(var(--spacing-xl) * 2);
-}
-
-
-
-
-#composer_revisited {
-
-  /*section {
-    $margin-token: 7.5em;
-    margin-bottom: $margin-token;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }*/
-
-  .spaced-120 {
-    & > * {
-      $margin-token: 7.5em;
-      margin-top: $margin-token;
-      margin-bottom: $margin-token;
-
-      &:first-of-type {
-        margin-top: 0;
+  .pill-card__text, .bob-benefit__txt {
+    padding: 0 8px;
+    
+    .h3, .bob-h3 {
+      $lh: 1.33em;
+      line-height: $lh;
+  
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    
+      @media screen and ( min-width: $md ) {
+        min-height: ( $lh * 2 );
+        -webkit-line-clamp: 2;
       }
-      &:last-of-type {
+    }
+  
+    .pill-card__copy, .bob-p {
+      $lh: 1.9em;
+      line-height: $lh;
+  
+      @media screen and ( min-width: $md ) {
+        display: -webkit-box;
+        min-height: ( $lh * 3 );
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+      }
+    }
+  }
+
+  // last items' row margin-bottom removal
+
+  .lg-last-4 {
+    > div:last-child {
+      .bob-benefit {
+        //background-color: red;
         margin-bottom: 0;
       }
     }
-  }
-
-  // margin removal
-
-  /*.li-test{
-    padding: 0;
-
-    li {
-      display: inline-block;
-    }
-    li:nth-child(4n+1):nth-last-child(-n+4),
-    li:nth-child(4n+1):nth-last-child(-n+4) ~ li {
-      background-color: red;
-    }
-  }*/
-  .lg-last-4 {
-    > div:last-child {
-        .pill-card {
-          //background-color: red;
-          margin-bottom: 0;
-        }
-      }
-    @media screen and ( min-width: $lg ) {
+    @media screen and ( min-width: $md ) {
       > div:nth-child(4n+1):nth-last-child(-n+4),
       > div:nth-child(4n+1):nth-last-child(-n+4) ~ div {
         //background-color: red;
-        .pill-card {
+        .bob-benefit {
           margin-bottom: 0;
         }
       }
@@ -141,21 +144,57 @@
   }
   .lg-last-3 {
     > div:last-child {
-        .ms-card {
-          //background-color: red;
-          margin-bottom: 0;
-        }
+      .bob-card {
+        //background-color: red;
+        margin-bottom: 0;
       }
-    @media screen and ( min-width: $lg ) {
+    }
+    @media screen and ( min-width: $md ) {
       > div:nth-child(3n+1):nth-last-child(-n+3),
       > div:nth-child(3n+1):nth-last-child(-n+3) ~ div {
         //background-color: red;
-        .ms-card {
+        .bob-card {
           margin-bottom: 0;
         }
       }
     }
   }
-  
+}
 
+.composer-sf {
+  .bob-card {
+    .bob-h3 {
+      @media screen and ( min-width: $lg ) {
+        min-height: calc( var(--lineheight) * 3 ) !important;  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3 !important;
+      }
+    }
+  }
+
+  .trailhead-card {
+    position: relative;
+
+    &.h-bkg--white--top-half::before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      height: 50%;
+      width: 100%;
+    }
+
+    .bob-card-wide {
+      position: relative;
+
+      .bob-card-wide__img {
+        img {
+          //object-fit: contain;
+
+          @media screen and ( min-width: $md ) {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+  }
 }

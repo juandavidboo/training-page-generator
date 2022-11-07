@@ -20,16 +20,6 @@ main {
 
   // margin helpers
 
-  .spaced-120 {
-    > * {
-      margin-bottom: 120px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
-
   .h-mb-0 {
     margin-bottom: 0;
   }
@@ -66,8 +56,8 @@ main {
     margin-bottom: 80px;
   }
 
-  .h-mb-108 {
-    margin-bottom: 108px;
+  .h-mb-280 {
+    margin-bottom: 280px;
   }
 
   .h-mb-0-sm {
@@ -82,10 +72,10 @@ main {
     }
   }
 
-  .h-mt-120-tabs-bp {
+  .h-mt-md-0 {
 
     @media screen and ( min-width: $md ) {
-      margin-top: 120px;
+      margin-top: 0px;
     }
   }
 
@@ -95,35 +85,53 @@ main {
 
   // Font size _helpers
 
-  .h-fs-xs {
-    font-size: var(--fs-xs); //12px
+  .eyebrow--20 {
+    //margin-top: 60px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
   }
 
-  .--fs-md-28 {
-    
-    @media screen and ( min-width: $md ) {
-      font-size: 28px;
+  .eyebrow--24 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    color: var(--color-regent);
+  }
+
+
+  /////////// MODULES ////////////
+
+  .bob-link {
+    color: 	var(--color-navy);
+    margin-top: 24px;
+  }
+
+  .bob-link--carot::before {
+    background-color: var(--color-navy);
+  }
+
+  .bob-benefit {
+    &.bkg-inverted--dark-navy {
+      background-color: var(--color-dark-navy);
+      padding: 40px 32px;
+      margin-bottom: 0;
     }
   }
 
-  // Container replacement fix
-  #eb-my-items-section > .container-fluid {
-    padding: 0; // make it 100% wide
-    overflow: hidden; // instead of margin reset on child row from margin -8px
-
+  .col-12.col-sm-12.col-md-6:last-of-type .bob-card {
+    margin-bottom: 0;
+    @media screen and ( min-width: 360px ) {
+      
+    }
   }
-
-  // missing links finder
-  a[href="#"] {
-    //color: #b11818 !important;
-  }
-
 }
 
 
-// MENU overwrite
+/////////// MENU overwrite ///////////
 
-.wrapper {
+main {
   margin-top: 65px;
 }
 
@@ -141,6 +149,9 @@ main {
     }
   
     .navbar-toggler {
+      padding: 0;
+      height: 65px;
+
       @media screen and ( min-width: $lg ) {
         display: block;
       }
@@ -148,12 +159,29 @@ main {
       &:focus{
         box-shadow: none;
       }
+
+      &[aria-expanded=true] {
+        .navbar-brand::after {
+          -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+          top: 30px;
+        }
+      }
     }
   }
 
-  .navbar-toggler {
-    padding: 0;
-    height: 65px;
+  .navbar-brand-desktop {
+    display: none;
+
+    @media screen and ( min-width: $lg ) {
+      font-size: 14px;
+      display: inline-block;
+      line-height: 0;
+      margin-right: 24px;
+      padding: 0;
+      height: 65px;
+      padding-top: 12px;
+    }
   }
 
   .navbar-brand {
@@ -192,13 +220,11 @@ main {
     margin-left: calc(var(--bs-gutter-x, 0.75rem) * -1);
     margin-right: calc(var(--bs-gutter-x, 0.75rem) * -1);
     position: relative;
-    //-webkit-transition: border-color 0.125s;
-    //transition: border-color 0.125s;
 
     &::before {
       content: '';
       position: absolute;
-      background: url('../images/pm-shared/partnermax-menu-bkg.png');
+      background: url('../images/partnermax/shared/partnermax-menu-bkg.png');
       background-repeat: no-repeat;
       background-position: right bottom;
       width: 60%;
@@ -237,9 +263,8 @@ main {
   .nav-link {
     color: var(--color-white);
     font-family: var(--ff-head);
-    //font-size: 22px;
     font-weight: 700;
-    padding: 12px 48px;
+    padding: 8px 48px;
 
     @media screen and ( min-width: $lg ) {
       font-size: 16px;
@@ -249,12 +274,11 @@ main {
     &:focus, &:hover {
       color: var(--color-seaserpent);
     }
-
   }
 
   .navbar-text {
     padding: 0;
-    margin: 40px 0;
+    margin: 20px 0 20px 0;
     display: block;
 
     @media screen and ( min-width: $lg ) {
@@ -286,74 +310,285 @@ main {
         &::before {
           content: '';
           position: absolute;
-          left: 0;
-          //background-image: url('../images/pm-shared/icon-profile.svg');
-          //background-size: 22px 22px;
+          //left: 0;
           width: 22px;
           height: 22px;
 
-          --icon-profile: url('../images/pm-shared/icon-profile.svg');
+          --icon-profile: url('../images/partnermax/shared/icon-profile.svg');
           content: '';
-          mask: var(--icon-profile); //url('components/assets/shape_btn_carot.svg');
+          mask: var(--icon-profile);
           mask-size: cover;
-          -webkit-mask: var(--icon-profile); //url('components/assets/shape_btn_carot.svg');
+          -webkit-mask: var(--icon-profile);
           -webkit-mask-size: cover;
           background-color: var(--color-white);
+        }
+
+        span.text {
+          display: none;
+        }
+        .block {
+          width: 22px;
+          height: 24px;
         }
       }
     }
   }
-
 }
 
-/* HOMEPAGE */
-#pm-home {
+
+/////////// BACKGROUND HELPERS ////////////
+
+.h-gradient-bkg-bubble-1 {
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    
+    background-image: url('../images/partnermax/home/bkg_01.jpg');
+    height: 225px;
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-position: 96%;
+    top: -5%;
+
+    display: none;
+
+      @media screen and ( min-width: $md ) {
+        display: block;
+      }
+  }
+}
+
+.h-gradient-bkg-bubble-2 {
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    width: 100%;
+    z-index: -1;
+    
+    background-image: url('../images/partnermax/home/bkg_02.jpg');
+    height: 396px;
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-position: 1%;
+    top: -45%;
+
+    display: none;
+
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+}
+
+.h-bkg--solid-bluez {
+  &::before {
+    content: '';
+    background: #E8F8FF;
+    display: block;
+    position: absolute;
+    top: 120px; //-180px;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    z-index: -1;
+
+    display: none;
+
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+}
+
+.h-bkg--red-dots {
+  &::after {
+    content: '';
+    background-image: url('../images/partnermax/shared/partnermax-bkg-red-dots.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    display: block;
+    position: absolute;
+    top: 100%; //-180px;
+    left: 0;
+    height: 480px;
+    width: 100%;
+    z-index: -1;
+
+    display: none;
+
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+}
+
+.h-bkg--red-dots-2 {
+  &::after {
+    content: '';
+    background-image: url('../images/partnermax/shared/partnermax-bkg-red-dots-2.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    display: block;
+    position: absolute;
+    top: 0; //-180px;
+    left: 0;
+    height: 556px;
+    width: 100%;
+    z-index: -1;
+
+    display: none;
+
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+}
+
+.h-bkg--gradient-3 {
+  background: rgb(16,0,196);
+  background: linear-gradient(270deg, rgba(209,97,237,1) -15%, rgba(16,0,196,1) 50%, rgba(9,108,238,1) 110%);
+}
+
+.h-bkg--blue-dots {
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url('../images/partnermax/shared/partnermax-bkg-blue-dots.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    position: absolute;
+    bottom: -230px; //-180px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+}
+
+/////////// PAGES SECTIONS ////////////
+
+.pages-content {
   overflow: hidden;
 
   .bob-h2 {
     margin-bottom: 24px;
   }
 
-  #hero {
+  .clamp-md-1 {
+    @media screen and ( min-width: $md ) {
+      min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
+      -webkit-line-clamp: 1;
+    }
+  }
+
+  .clamp-md-2 {
+    @media screen and ( min-width: $md ) {
+      min-height: calc( var(--lineheight) * 2 );  // minimum height is equivalent to twice the P line height
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .clamp-md-3 {
+    @media screen and ( min-width: $md ) {
+      min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  // hero module
+
+  .hero {
+
+    .bob-header__image.direction-shift {
+      @media screen and ( min-width: $md ) {
+        direction: rtl;
+      }
+
+      @media screen and ( min-width: $lg ) {
+        direction: ltr;
+      }
+    }
+
+    .bob-button {
+      margin-top: 24px;
+    }
     .bob-p--large {
       margin-bottom: 0;
+
       @media screen and ( max-width: $sm ) {
         font-size: 16px;
         line-height: 30px;
       }
     }
   }
+  
+  // three cards modules
 
-  #roles{
-    > .container {
-      
-    }
-    .roles-grid__contents {
-      margin-bottom: 80px;
+  .three-cards{
+
+    .overlap-top {
+      margin-top: -40px;
+
+      @media screen and ( min-width: $md ) {
+        margin-top: -80px;
+      }
 
       @media screen and ( min-width: $lg ) {
+        margin-top: -120px;
+      }
+    }
+
+    .bob-card--image {
+
+      @media screen and ( min-width: $md) {
         margin-bottom: 0;
       }
 
-      .bob-h3 {
-        margin-bottom: 24px;
+      .bob-card__img {
+        @media screen and ( min-width: $sm) {
+          height: 260px;
+        }
+        @media screen and ( min-width: $md) {
+          height: 160px;
+        }
+
+        // only success page
+        &.img-fit {
+          img {
+            object-fit: contain;
+          }
+        } // only success page
       }
-    }
 
-    .roles-grid__rowspan {
-
-      .container {
-        padding: 0;
-        height: 100%;
-
-        .row {
-          height: 100%;
+      .bob-h3 {
+        @media screen and ( min-width: $sm ) {
+          @include ellipsis;
+          min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
+          -webkit-line-clamp: 1;
         }
       }
     }
+  }
 
+  // grid module
+
+  .grid {
+
+    // index button
     .bob-block__signup {
-      width: 320px;
+      width: 359px; // 230px button + 24 padding + 90 bkg image difference
       position: relative;
 
       @media screen and ( min-width: $sm ) {
@@ -378,10 +613,10 @@ main {
         &::before {
           content: '';
           position: absolute;
-          background: url('../images/pm-home/partnermax-join-list.jpg');
+          background: url('../images/partnermax/home/partnermax-join-list.jpg');
           background-repeat: no-repeat;
           background-size: 100%;
-          left: 50%;
+          left: 155px;
           top: 0;
           height: 100%;
           width: 190px;
@@ -389,7 +624,6 @@ main {
 
           @media screen and ( min-width: $sm ) {
             width: 250px;
-            left: 155px;
           }
         }
       }
@@ -407,30 +641,97 @@ main {
           font-size: 16px;
         }
       }
-    }
-  }
+    } // index button
 
-  #three-cards {
+    &.browse-content {
 
-    .bob-card {
-      //margin-bottom: 40px;
+      .bob-block__link-def {
+        margin-top: 40px;
+      }
+  
+      .bob-h2 {
+        margin-bottom: 60px;
+      }
       
-      @media screen and ( min-width: $md) {
-        margin-bottom: 0;
+      .bob-link {
+        margin-bottom: 8px;
+        display: block;
+      }
+  
+      .eyebrow--mod {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+  
+      }
+    }
+
+    // journey page
+    &.h-mb-280 {
+      @media screen and ( max-width: $sm ) {
+        margin-bottom: 180px;
       }
 
-      .bob-card__img {
-        @media screen and ( min-width: $sm) {
-          height: 260px;
+    }
+
+    .col__single {
+      margin-bottom: 0;
+
+      .h-bkg--blue-dots::before {
+        @media screen and ( max-width: $sm ) {
+          bottom: -130px;
         }
-        @media screen and ( min-width: $md) {
-          height: 160px;
+      }
+    } //journey page end
+
+    .col__second {
+
+      .bob-block__signup, .bob-benefit {
+        margin-top: 80px;
+
+        @media screen and ( min-width: $md ) {
+          margin-top: 0;
         }
       }
     }
+
+    .bob-card--text-sm {
+      .bob-p {
+        @media screen and ( min-width: $md ) {
+          min-height: calc( var(--lineheight) *  2);  // minimum height is equivalent to twice the P line height
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+
+    .bob-benefit {
+      .img__alliance-champion {
+        max-width: 180px;
+        
+        @media screen and ( min-width: $sm ) {
+          max-width: unset;
+        }
+        
+        @media screen and ( min-width: $md ) {
+          max-width: 180px;
+        }
+      }
+    
+      .img__marketing-cmo {
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+
+    .bob-benefit + .bob-benefit {
+      margin-top: 80px;
+    }
   }
 
-  #wide-card {
+  // wide-card module
+
+  .wide-card {
 
     .bob-card-wide__img {
       background-color: var(--color-dark-navy);
@@ -460,315 +761,101 @@ main {
     }
   }
 
-  #banner {}
+  // quote module
 
-  /*BACKGROUND HELPERS*/
+  .quote-slider {
+    overflow: hidden;
 
-  .h-gradient-bkg-bubble-1 {
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      z-index: -1;
+    #quote-slider__carousel{
       
-      background-image: url('../images/pm-home/bkg_01.jpg');
-      height: 225px;
-      background-color: unset;
-      background-repeat: no-repeat;
-      background-position: 99%;
-      top: -5%;
-
-      display: none;
-
-        @media screen and ( min-width: $md ) {
-          display: block;
-        }
-    }
-  }
-
-  .h-gradient-bkg-bubble-2 {
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
-      z-index: -1;
-      
-      background-image: url('../images/pm-home/bkg_02.jpg');
-      height: 396px;
-      background-color: unset;
-      background-repeat: no-repeat;
-      background-position: 1%;
-      top: -45%;
-
-      display: none;
-
-      @media screen and ( min-width: $md ) {
-        display: block;
-      }
-    }
-  }
-
-}
-
-.other-pages {
-
-  #hero {
-
-    .bob-header__image {
-      @media screen and ( min-width: $md ) {
-        direction: rtl;
-      }
-
-      @media screen and ( min-width: $lg ) {
-        direction: ltr;
-      }
-    }
-
-  }
-  
-  #three-cards{
-
-    .h-solid-bkg-bluez {
-      &::after {
+      &::before {
         content: '';
-        background: #E8F8FF;
-        display: block;
-        position: absolute;
-        top: 120px; //-180px;
-        left: 0;
-        height: 110%;
-        width: 100%;
-        z-index: -1;
-
-        display: none;
-
-          @media screen and ( min-width: $md ) {
-            display: block;
-          }
-      }
-    }
-
-    .bob-card {
-      /*margin-bottom: 40px;
-      
-      @media screen and ( min-width: $md) {
-        margin-bottom: 0;
-      }*/
-
-      .bob-card__img img {
-        @media screen and ( min-width: $sm) {
-          height: unset;
-        }
-        @media screen and ( min-width: $md) {
-          height: 100%;
-        }
-        
-      }
-
-      .bob-card__img {
-        @media screen and ( min-width: $sm) {
-          height: 260px;
-        }
-        @media screen and ( min-width: $md) {
-          height: 160px;
-        }
-      }
-      
-    }
-
-    .overlap-top {
-      margin-top: -40px;
-
-      @media screen and ( min-width: $md ) {
-        margin-top: -80px;
-      }
-
-      @media screen and ( min-width: $lg ) {
-        margin-top: -120px;
-      }
-    }
-
-    .bob-card--image{
-      .bob-h3 {
-        @media screen and ( min-width: $sm ) {
-          @include ellipsis;
-          min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 1;
-        }
-      }
   
-      /*.bob-p {
-        @media screen and ( min-width: $sm ) {
-          @include ellipsis;
-          min-height: calc( var(--lineheight) * 1 );  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 1;
-        }
-      }*/
-
-      .clamp-md-2 {
         @media screen and ( min-width: $md ) {
-          min-height: calc( var(--lineheight) *  2);  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 2;
-        }
-      }
-
-      .clamp-md-3 {
-        @media screen and ( min-width: $md ) {
-          min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 3;
+          background: url(https://training.mulesoft.com/oltpublish/cmsres/images/customer-quote-brand-pattern-desktop.svg) repeat-x center top;
+          position: absolute;
+          height: 100%;
+          width: 820px;
+          top: 0;
+          right: unset;
+          left: 73%;
         }
       }
     }
-  }
 
-  #roles {
-
-    .roles-grid__contents {
-      margin-bottom: 80px;
+    .carousel-item {
       @media screen and ( min-width: $md ) {
-        margin-bottom: 0;
+        padding-top: 55px;
       }
     }
 
-    .bob-card--text-sm {
-      .bob-h3 {
-         @media screen and ( min-width: $md ) {
-          min-height: calc( var(--lineheight) *  1);  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 1;
-        }
-      }
-
-      .bob-p {
-        @media screen and ( min-width: $md ) {
-          min-height: calc( var(--lineheight) *  2);  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 2;
-        }
-      }
-
-      .clamp-md-2 {
-        @media screen and ( min-width: $md ) {
-          min-height: calc( var(--lineheight) *  2);  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 2;
-        }
-      }
-
-      .clamp-md-3 {
-        @media screen and ( min-width: $md ) {
-          min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
-          -webkit-line-clamp: 3;
-        }
-      }
-    }
-
-    .image-banner {
+    .quote-slider__img {
       position: relative;
-      line-height: 0;
 
-      .bob-card__img{
-        //height: unset;
+      img {
+        border-radius: 50%;
+        box-shadow: 0 0 1rem rgba(0,0,0,.08);
+        max-width: 272px;
+        margin: 1rem auto 0 auto;
+        position: relative;
 
-        img {
-          display: none;
-        }
-
-        .image_xsm {
-          @media screen and ( max-width: $sm ) {
-            display: block;
-          }
-        }
-
-        .image_sm {
-          @media screen and ( min-width: $sm ) {
-            display: block;
-          }
-          @media screen and ( min-width: $md ) {
-            display: none;
-          }
-        }
-
-        .image_md {
-          @media screen and ( min-width: $md ) {
-            display: block;
-          }
-          @media screen and ( min-width: $lg ) {
-            display: none;
-          }
-        }
-
-        .image_lg {
-          @media screen and ( min-width: $lg ) {
-            display: block;
-          }
-        }
-      }
-
-      .bob-card__btn {
-        position: absolute;
-        bottom: 40px;
-        padding: 0 32px;
-        text-align: center;
-        width: 100%;
-      }
-    }
-
-    .bob-benefit {
-      &.bkg-inverted--dark-navy {
-        background-color: var(--color-dark-navy);
-        padding: 40px 32px;
-        margin-bottom: 0;
-      }
-
-      .img__alliance-champion {
-        max-width: 180px;
-        
-        @media screen and ( min-width: $sm ) {
-          max-width: unset;
-        }
-        
         @media screen and ( min-width: $md ) {
-          max-width: 180px;
+          margin-bottom: 1rem;
+          max-width: 304px;
+        }
+
+        @media screen and ( min-width: $lg ) {
+          margin-bottom: 1rem;
+          max-width: 358px;
+        }
+      }
+    }
+
+    .quote-slider__txt {
+      //padding-top: 25px;
+      position: relative;
+      margin-top: 79px;
+
+      @media screen and ( min-width: $md ) {
+        margin-top: 0px;
+      }
+
+      &::before {
+        position: absolute;
+        left: 12px;
+        top: -55px;
+        content: '';
+        width: 70px;
+        height: 47px;
+        background: url(https://training.mulesoft.com/oltpublish/cmsres/images/quote-img.svg) no-repeat left top;
+
+        @media screen and ( min-width: $sm ) {
+          left: -28px;
         }
       }
 
-      .img__marketing-cmo {
-        width: 100%;
-        max-width: 260px;
+      blockquote {
+        font-family: var(--ff-head);
+        font-weight: bold;
+        //font-size: var(--fs-h3); // 33px
+        //line-height: 2rem; // 44px
+        font-size: var(--fs-h2); // 33px
+        line-height: 2.75rem; // 44px
+        margin: 0 0 32px 0;
+
+        @media screen and ( min-width: $lg ) {
+          margin: 0 0 64px 0;
+        }
       }
-    }
-  }
 
-  #browse-content {
+      figcaption {
+        font-size: 16px;
+        line-height: 30px;
 
-    .bob-block__link-def {
-      margin-bottom: 40px;
-    }
-
-    .bob-h2 {
-      margin-bottom: 60px;
-    }
-    
-    .bob-link {
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .eyebrow--mod {
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      margin-top: 60px;
-      margin-bottom: 40px;
-
-    }
-
-    .bob-benefit {
-      &.bkg-inverted--dark-navy, .browse-content .bob-benefit{
-        background-color: var(--color-dark-navy);
-        padding: 40px 32px;
-        margin-bottom: 0;
+        @media screen and ( min-width: $sm ) {
+          font-size: var(--fs-h3);
+        line-height: 2rem;
+        }
       }
     }
   }

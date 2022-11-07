@@ -5,6 +5,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+//const sass = require('sass-loader');
 const postcss = require('gulp-postcss');
 const cssimport = require('postcss-import');
 const cssnano = require('cssnano');
@@ -15,7 +16,7 @@ const global = require('../gulp-config.js');
 
 sass.compiler = require('sass');
 
-module.exports = function () {
+module.exports = () => {
   const production = global.isProduction();
   const vendorFileName = production ? global.file.vendorStylesMin : global.file.vendorStyles;
   const plugins = [

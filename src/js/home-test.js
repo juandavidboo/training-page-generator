@@ -546,4 +546,25 @@ document.addEventListener('DOMContentLoaded', () => {
     keyboardSupport(tabContainer, hasTabs(tabContainer));
   };
 
+  const allTiles = document.querySelectorAll('.bob-card, .bob-card-wide');
+  // console.log(allTiles);
+  for (let i = 0; i < allTiles.length; i++) {
+    const myElem = allTiles[i];
+    myElem.addEventListener('click', (e) => {
+      e.preventDefault();
+      // console.log(myElem);
+      const myLink = myElem.querySelector('a');
+      // console.log(myLink); 
+      if (myLink.getAttribute('href')) {
+        const myURL = myLink.href;
+        const myTarget = myLink.target;
+        // console.log(myURL);
+        // console.log(myTarget);
+        if (e.ctrlKey || e.metaKey || (myTarget === '_blank'))window.open(myURL, '_blank');
+        else window.location.href = myURL;
+      } else {
+        myLink.click();
+      }
+    });
+  }
 }, false);

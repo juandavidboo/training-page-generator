@@ -60,7 +60,6 @@ module.exports = function () {
         if (error) {
           throw new Error(error);
         }
-        
         if (production) {
           console.log(
             stats.toString({

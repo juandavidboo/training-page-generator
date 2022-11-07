@@ -153,3 +153,45 @@
     order: 1;
   }
 }
+
+.h-clamp-md-1 {
+  @media screen and ( min-width: $md ) {
+    min-height: calc( var(--lineheight) * 1 ) !important;  // minimum height is equivalent to twice the P line height
+    -webkit-line-clamp: 1 !important;
+  }
+}
+
+.h-clamp-md-2 {
+  @media screen and ( min-width: $md ) {
+    min-height: calc( var(--lineheight) * 2 ) !important;  // minimum height is equivalent to twice the P line height
+    -webkit-line-clamp: 2 !important;
+  }
+}
+
+.h-clamp-md-3 {
+  @media screen and ( min-width: $md ) {
+    min-height: calc( var(--lineheight) * 3 ) !important;  // minimum height is equivalent to twice the P line height
+    -webkit-line-clamp: 3 !important;
+  }
+}
+
+.h-clamp-lg-1 {
+  @media screen and ( min-width: $lg ) {
+    min-height: calc( var(--lineheight) * 1 ) !important;  // minimum height is equivalent to twice the P line height
+    -webkit-line-clamp: 1 !important;
+  }
+}
+
+.h-clamp-lg-2 {
+  @media screen and ( min-width: $lg ) {
+    min-height: calc( var(--lineheight) * 2 ) !important;  // minimum height is equivalent to twice the P line height
+    -webkit-line-clamp: 2 !important;
+  }
+}
+
+.h-clamp-lg-3 {
+  @media screen and ( min-width: $lg ) {
+    min-height: calc( var(--lineheight) * 3 ) !important;  // minimum height is equivalent to twice the P line height
+    -webkit-line-clamp: 3 !important;
+  }
+}

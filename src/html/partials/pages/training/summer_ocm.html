@@ -1,0 +1,276 @@
+<link href="https://www.mulesoft.com/training/assets/css/summer-ocm.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://staging.training.mulesoft.com/cmsres-cdn/attachments/mulesoft-eb-agg.css?v=2">
+<script>
+    function removejscssfile(filename, filetype){
+    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
+    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
+    var allsuspects=document.getElementsByTagName(targetelement)
+    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
+    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
+    }
+  }
+  
+  //removejscssfile("somescript.js", "js") //remove all occurences of "somescript.js" on page
+  removejscssfile("mulesoft-eb-agg.css", "css") //remove all occurences "somestyle.css" on page
+</script>
+
+<main>
+<div id="summer-ocm">
+  
+  <!-- header START -->
+  <section class="container-fluid">
+    <div class="bob-header__bkg bkg-gradient--lt-gray">
+      <div class="container">
+        <article class="bob-header">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-10 col-md-6">
+              <div class="bob-header__text">
+                <h1 class="bob-h1">Summer of Certification<br><span class="bob-h1--color">Maintenance</span></h1><p class="bob-p--large">Show off your renewed MuleSoft Certification and <span style="white-space: nowrap">win fun prizes!</span></p>
+              </div>
+            </div>
+            <div class="col-10 col-md-5 offset-md-1">
+              <div class="bob-header__image" role="img" aria-label="">
+                <img src="https://www.mulesoft.com/training/assets/images/summer-ocm/image-summer-certification-maintenance.png" alt="" class="" width="612">
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- header END -->
+
+  <!-- 2 zigzag START -->
+  <section id="" class="zigzags">
+    <div class="container">
+      <!-- zigzag START -->
+      <article class="bob-zigzag h-mb-80">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6">
+            <div class="bob-zigzag__image" role="img" aria-label="">
+              <img src="https://www.mulesoft.com/training/assets/images/summer-ocm/image-enter-to-win.jpg" alt="" width="552">
+            </div>
+          </div>
+          <div class="col-12 col-md-5 offset-md-1">
+            <div class="bob-zigzag__texts">
+              <h2 class="bob-h3">Enter to win by</h2>
+              <ol class="bob-p">
+                <li>Taking the Certification maintenance exam to renew your valid certification</li>
+                <li>Posting your certification to LinkedIn with <strong>#CertSummer</strong> and <strong>#MuleSoft</strong> from <span style="white-space: nowrap">June&nbsp;15 - July&nbsp;17,&nbsp;2022</span></li>
+              </ol>
+              <p class="bob-p">Renew your credentials this summer so you’re ready to get down to business this&nbsp;fall. To celebrate MuleSoft’s Certification Maintenance program, we’re sending out 150 special edition <strong>#MuleSoftCertified</strong> t-shirts.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- zigzag END -->
+    </div>
+  </section>
+  <!-- 2 zigzag END -->
+
+  <!-- cards START -->
+  <section id="cards" class="h-mb-80">
+    <div class="container">
+      <div class="row justify-content-center justify-content-lg-start h-mb-20">
+        <div class="col-12 text-center">
+          <h2 class="bob-h2">Maintenance exams are available for <br class="d-none d-md-block">the following certifications</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center justify-content-sm-start align-items-top">
+        <div class="col-12 col-md-4 col-lg-4">
+          <!-- card START -->
+          <article class="bob-card bob-card--text bob-card--border h-border--navy">
+            <a href="https://training.mulesoft.com/certification/developer-mule4-level1-maintenance" class="bob-card__link-cover"><span>View exam</span></a>
+            <div class="bob-card__txt">
+              <span class="bob-eyebrow--small">Certification</span>
+              <h3 class="bob-h3 h-clamp-lg-3">MuleSoft Certified Developer&nbsp;- Level&nbsp;1 (Mule&nbsp;4)</h3>
+              <a href="https://training.mulesoft.com/certification/developer-mule4-level1-maintenance" class="bob-link bob-link--carot"><span>View exam</span></a>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+          <!-- card START -->
+          <article class="bob-card bob-card--text bob-card--border h-border--navy">
+            <a href="https://training.mulesoft.com/certification/architect-integration-level1-maintenance" class="bob-card__link-cover"><span>View exam</span></a>
+            <div class="bob-card__txt">
+              <span class="bob-eyebrow--small">Certification</span>
+              <h3 class="bob-h3 h-clamp-lg-3">MuleSoft Certified Integration Architect&nbsp;- Level&nbsp;1</h3>
+              <a href="https://training.mulesoft.com/certification/architect-integration-level1-maintenance" class="bob-link bob-link--carot"><span>View exam</span></a>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+          <!-- card START -->
+          <article class="bob-card bob-card--text bob-card--border h-border--navy">
+            <a href="https://training.mulesoft.com/certification/architect-platform-level1-maintenance" class="bob-card__link-cover"><span>View exam</span></a>
+            <div class="bob-card__txt">
+              <span class="bob-eyebrow--small">Certification</span>
+              <h3 class="bob-h3 h-clamp-lg-3">MuleSoft Certified Platform Architect&nbsp;- Level&nbsp;1</h3>
+              <a href="https://training.mulesoft.com/certification/architect-platform-level1-maintenance" class="bob-link bob-link--carot"><span>View exam</span></a>
+            </div>
+          </article>
+          <!-- card END -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- cards END -->
+
+  <!-- 2 zigzag START -->
+  <section id="" class="zigzags h-mb-80">
+    <div class="container">
+      <!-- zigzag START -->
+      <article class="bob-zigzag bob-zigzag--col-swap">
+        <div class="row align-items-center">
+          <div class="col-12 offset-md-1 col-md-6">
+            <div class="bob-zigzag__image" role="img" aria-label="">
+              <img src="https://www.mulesoft.com/training/assets/images/summer-ocm/image-maintain-mulesoft-certification.jpg" alt="" width="552">
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="bob-zigzag__texts">
+              <h2 class="bob-h3">Maintain your MuleSoft Certification&nbsp;to</h2>
+              <ul class="bob-p">
+                <li>Keep up-to-date with the latest Anypoint Platform features and enhancements</li>
+                <li>Sharpen your skills to increase efficiency and reduce remediation in your <span style="white-space: nowrap">day-to-day work</span></li>
+                <li>Continue to boost your career by showing off your certified status on your LinkedIn profile</li>
+              </ul>
+              <p class="bob-p">If you’re within 90 days of your certification expiry date, you can maintain your certification for free! Look for your free exam attempts in your <a href="https://training.mulesoft.com/login" class="bob-link"><span>learner dashboard</span></a>.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- zigzag END -->
+    </div>
+  </section>
+  <!-- 2 zigzag END -->
+
+  <!-- P START -->
+  <section id="" class="h-mb-120">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-sm-12 text-md-center">
+          <p class="bob-p">Questions? <a href="https://help.learn.mulesoft.com/hc/en-us/articles/1260803627450-Certification-Maintenance-FAQs" class="bob-link"><span>Certification Maintenance FAQs</span></a>.</p>
+          <p class="bob-p">Don’t see your free exam attempts in your learner dashboard? <a href="https://help.learn.mulesoft.com/hc/en-us/requests/new" class="bob-link"><span>Contact MuleSoft Training Operations</span></a>.</p>
+          <p class="bob-p">T-shirt prizes are only available to legal residents of the 50 United States (including the District of Columbia) and India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- P END -->
+
+  <!-- 3 benefits START -->
+  <section id="benefits" class="">
+    <div class="container">
+      <div class="row justify-content-center justify-content-lg-start">
+        <div class="col-12 text-center">
+          <h1 class="bob-h1">MuleSoft's Summer of <br><span class="bob-h1--color">Certification Sweepstakes</span></h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <h2 class="bob-h3 h-mb-16">Official Sweepstakes Rules</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center h-mb-60">
+        <div class="col-12 col-lg-10">
+          <ol class="bob-p">
+            <li><strong>NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE OR PAYMENT WILL NOT INCREASE YOUR CHANCES OF WINNING. VOID WHERE PROHIBITED.</strong></li>
+
+            <li><strong>AGREEMENT TO OFFICIAL RULES:</strong>  Participation in the Sweepstakes constitutes entrant’s full and unconditional acceptance of these official rules (“Official Rules”) and the decisions of the judges, administrators and Sponsor, which are final and binding in all aspects. </li>
+            
+            <li><strong>ENTRY PERIOD:</strong>  The MuleSoft's Summer of Certification Sweepstakes (“Sweepstakes”) sponsored by Salesforce, Inc. (“Sponsor”) begins on June 15, 2022 at 1 a.m. PT and ends on July 17, 2022 at 11:59 p.m. PT (“Entry Period”). Sponsor’s computer will be the official clock for the Sweepstakes. All entries must be received during the Entry Period to be eligible to enter the Sweepstakes or win a prize. All times in these Official Rules are Pacific Time (“PT”).</li>
+            
+            <li><strong>ELIGIBILITY:</strong>  The Sweepstakes is open to individuals who (i) are legal residents of the 50 United States (including the District of Columbia) and India (collectively “Eligibility Area”), (ii) are 18 years of age or older or who have reached the age of majority in their jurisdiction of residence as of the date of entry, and, (iii) have a LinkedIn account. Employees, contractors, consultants, officers, directors and agents (and their immediate families and household members regardless of where they live), or members of the same households, whether related or not, of Sponsor, its parent, divisions, subsidiaries, agents, promotional partners, advertising/promotion agencies, and prize suppliers (“Sweepstakes Entities”) are not eligible to participate in the Sweepstakes or win any prize. Employees or officials of any government entity are not eligible to participate or win a prize. If you enter this Sweepstakes on behalf of a company, you represent and warrant that you are an authorized agent with the authority to enter on its behalf and bind said company. Failure to meet the eligibility requirements will result in an entry being invalid and forfeiture of any prize. Companies and individuals outside of the Eligibility Area are not eligible to participate or win a prize. Sponsor reserves the right to disqualify any entrant that Sponsor determines could potentially reflect negatively on Sponsor’s image. VOID OUTSIDE OF THE ELIGIBILITY AREA AND WHERE PROHIBITED OR RESTRICTED BY LAW. Sweepstakes is subject to applicable laws.</li>
+            
+            <li><strong>TO ENTER:</strong> During the Entry Period, eligible participants must publicly post #CertSummer and #MuleSoft on LinkedIn. Any Sweepstakes submissions must not (i) violate any third party rights, including, but not limited to, copyrights, trademark rights, or rights of privacy and publicity; (ii) contain defamatory statements; (iii) include threats to any person, place, business or group; or (iv) be obscene, indecent or objectionable. If applicable, individuals who are disqualified from completing the entry form or survey because of any screening questions, or who fail to complete the entry form or survey for any other reason, may not enter the Sweepstakes. Limit of one (1) entry per person during the Entry Period, regardless of the method of entry. Entry information becomes the property of Sponsor and will not be acknowledged or returned. Entries will be disqualified if they are late, incomplete and/or in excess of the stated entry limits. Any entries attempted through the use of agencies or robotic, repetitive, automatic, programmed or similar methods will be void. </li>
+            
+            <li><strong>PRIZE AND PRIZE VALUE:</strong> One-hundred Fifty (150) winners will each receive one (1) special edition MuleSoft Certified T-shirt. The approximate retail value (“ARV”) of each prize is $18. Total ARV of all prizes is $2,700.  All currency listed in these Official Rules is in U.S. Dollars.</li>
+            
+            <li><strong>PRIZE DETAILS AND CONDITIONS:</strong> Any prize details not specified herein will be determined by Sponsor in its sole discretion. Prizes are not transferable, assignable or refundable and cannot be substituted for cash. Prizes must be accepted as awarded. Sponsor reserves the right to substitute prizes of equal or greater monetary value to the prizes if for any reason any prize cannot be awarded as contemplated in these Official Rules. <br>
+            <strong>Sponsor is not responsible for lost or stolen prize elements. Prizes may be reported as income to a winner and each winner will be responsible for all taxes associated with the receipt of any prize. Winners may be required to complete required tax forms or other documents requested within the time period stipulated by Sponsor. Winners may be responsible for any costs and expenses not listed herein. Winners will receive their prizes within sixty (60) days of the relevant prize date closing date unless notified otherwise. Sponsor reserves the right to cancel if the fairness of the Sweepstakes is compromised. Proof of identity, age and/or legal residence may be required to claim the prize. Failure to comply with any of the requirements set forth in the Official Rules may result in disqualification or forfeiture of the prize.</strong></li>
+            
+            <li><strong>WINNER NOTIFICATION AND ANNOUNCEMENT:</strong>  Sponsor will randomly select winners from among all eligible entries received during the Entry Period. The potential winners will be notified on or about July 20, 2022, via direct message on LinkedIn or via email on file with the winner's certifications with Sponsor. Sponsor will not be liable for any potential prize notification that is lost, intercepted, or not received by any potential winner for any reason. If a potential winner cannot be contacted within five (5) days after the first attempt to contact the winner, the Sponsor may select an alternate potential winner from the remaining eligible entries. If a potential winner is unable to accept the prize or any portion of the prize for any reason, Sponsor shall have no further obligation to such potential winner. There is a limit of one (1) prize per entrant. You need not be present to win. To win a prize, entrants in Canada must correctly answer a mathematical skill-testing question to be administered in a manner to be determined by Sponsor. In order to receive a prize, the winner may be required to sign a Declaration of Eligibility, Liability and Publicity Release (unless prohibited by law).</li>
+            
+            <li><strong>ODDS OF WINNING:</strong>  Odds of winning will depend on number of valid entries received during the Entry Period.</li>
+            
+            <li><strong>GENERAL CONDITIONS:</strong>  Sweepstakes Entities and Internet/wireless access providers are not responsible for incomplete, late, lost, misdirected or postage-due entries or mail, or for any technical malfunction, human error, lost or delayed data transmission, omission, interruption, deletion, and defect or line failure in connection with any telephone network, computer equipment, software or any combination thereof. Entries are void if unreadable, inaccurate, and incomplete, mutilated, tampered with, forged, mechanically reproduced, irregular in any way or otherwise not in compliance with these Official Rules. Sweepstakes Entities make no warranties, and hereby disclaim any and all warranties, express or implied, concerning any prize furnished or made available in connection with the Sweepstakes. Although Sponsor attempts to ensure the integrity of the Sweepstakes, Sweepstakes Entities are not responsible for the actions of entrants or other individuals in connection with the Sweepstakes, including entrants’ or other individuals’ attempts to circumvent the Official Rules or otherwise interfere with the administration, security, fairness, integrity or proper conduct of the Sweepstakes. Sweepstakes Entities are not responsible for injury or damage to entrant’s or to any other person’s computer(s), wireless devices, other equipment or person(s), related to or resulting from participation in the Sweepstakes or downloading materials from or using any website. In the event of any conflict between any details contained in these Official Rules and details contained in any Sweepstakes advertising materials, the details of the Sweepstakes as set forth in these Official Rules shall prevail. If, for any reason, the Sweepstakes is not capable of running as planned by reason of an insufficient number of eligible entries, damage by computer virus, worms, bugs, tampering, unauthorized intervention, fraud, technical limitations or failures, by reason of any acts of God, terrorist acts, earthquake, war, fire, flood, unusually severe weather, strikes or legal disputes (whether legal or illegal), industry conditions, bankruptcy or liquidation, marketplace demands, applicable law, unforeseen obstacles or any other causes which, in the sole opinion of Sponsor, could corrupt, compromise, undermine or otherwise affect the administration, security, fairness, integrity, viability or proper conduct of the Sweepstakes, Sponsor reserves the right in its sole and absolute discretion to cancel, terminate, modify or suspend all or any part of the Sweepstakes, and to select the prize winner from among the applicable eligible entries received up to the time of such cancellation, termination, modification or suspension, as applicable, or to proceed in such a manner as may be deemed fair and equitable by Sponsor in its sole discretion. Screen shots or any other evidence of entry submission will not be deemed receipt of any such entry. Entry must be made by the entrant and via the means described herein. You are not a winner until your entry has been verified and you have complied with these Official Rules. In the event of a dispute as to any online entry, if any, the authorized account holder of the e-mail address used to enter the Sweepstakes will be deemed to be the entrant. The “authorized account holder” is the natural person who is assigned to an email address by an internet access provider, online service provider or other organization responsible for assigning email addresses for the domain associated with the submitted email address.</li>
+            
+            <li><strong>CONDUCT:</strong>  BY ENTERING AND PARTICIPATING IN THIS SWEEPSTAKES, YOU: (A) FULLY AND UNCONDITIONALLY AGREE TO BE BOUND BY THESE OFFICIAL RULES AND BY ALL DECISIONS OF SPONSOR (WHICH DECISIONS SHALL BE FINAL AND BINDING IN ALL RESPECTS), INCLUDING WITHOUT LIMITATION DECISIONS REGARDING ELIGIBILITY, WINNERS AND THE INTERPRETATION OF TERMS USED IN THESE OFFICIAL RULES; (B) REPRESENT AND WARRANT THAT ALL INFORMATION PROVIDED BY YOU IN CONNECTION WITH THE SWEEPSTAKES IS TRUE, ACCURATE AND COMPLETE; AND (C) AGREE TO COMPLY WITH ALL FEDERAL, STATE, LOCAL, TERRITORIAL, AND PROVINCIAL LAWS AND REGULATIONS. SPONSOR RESERVES THE RIGHT, AT ANY TIME AND AT ITS SOLE DISCRETION, TO DISQUALIFY AND/OR DEEM INELIGIBLE TO PARTICIPATE IN THIS SWEEPSTAKES OR ANY FUTURE SPONSOR PROMOTIONS, ANY INDIVIDUAL IT SUSPECTS: (A) TO BE TAMPERING WITH THE ENTRY PROCESS OR THE OPERATION OF THE SWEEPSTAKES OR ANY WEBSITE; (B) TO BE ACTING IN VIOLATION OF THE OFFICIAL RULES OR SPONSOR’S PRIVACY POLICY OR OTHER TERMS, CONDITIONS OR GUIDELINES; (C) TO BE ACTING IN BAD FAITH OR IN A DISRUPTIVE MANNER, OR WITH THE INTENT TO ANNOY, ABUSE, THREATEN OR HARASS ANY OTHER PERSON; (D) TO HAVE FAILED TO AGREE TO THESE OFFICIAL RULES; OR (E) TO BE IN VIOLATION OF THESE OFFICIAL RULES. ANY ATTEMPT BY AN ENTRANT OR ANY OTHER INDIVIDUAL TO DELIBERATELY DAMAGE ANY INTERNET SITE OR UNDERMINE THE LEGITIMATE OPERATION OF THE SWEEPSTAKES IS A VIOLATION OF THESE OFFICIAL RULES AS WELL AS CRIMINAL AND CIVIL LAWS. SHOULD SPONSOR BELIEVE OR BECOME AWARE THAT SUCH AN ATTEMPT HAS BEEN, IS BEING, OR WILL BE MADE, SPONSOR RESERVES THE RIGHT TO SEEK REMEDIES AND DAMAGES FROM ANY RESPONSIBLE ENTRANT(S) AND OTHER RESPONSIBLE INDIVIDUAL(S) IN THE ATTEMPTED DAMAGE TO THE FULLEST EXTENT PERMITTED BY LAW, INCLUDING WITHOUT LIMITATION CRIMINAL PROSECUTION.</li>
+            
+            <li><strong>RELEASE, LIMITATION OF LIABILITY, AND INDEMNIFICATION:</strong> By participating in the Sweepstakes, you agree to release, indemnify and hold harmless Sponsor, its parent, its subsidiaries, affiliates, and each of their respective officers, directors, employees, and agents from and against any claim or cause of action arising out of participation in the Sweepstakes or receipt or use of any prize, including, but not limited to: (a) unauthorized human intervention in the Sweepstakes; (b) technical errors; (c) printing errors; (d) late or undelivered mail; (e) errors in the administration of the Sweepstakes; or (f) injury or damage to persons or property. You waive the right to claim any attorney’s fees and any damages whatsoever, including, but not limited to, punitive, consequential, direct, or indirect damages. Entrant agrees that in any cause of action, the Sweepstakes Entities, and each of their respective officers, directors, employees, representatives, agents, shareholders, successors and assigns  liability will be limited to the cost of entering and participating in the sweepstakes.</li>
+            
+            <li><strong>PRIVACY AND PUBLICITY:</strong> Any information you submit as part of the Sweepstakes will be treated in accordance with Sponsor’s <a href="https://www.salesforce.com/company/privacy/full_privacy/" class="bob-link"><span>Privacy Statement</span></a>, currently located at <a href="https://www.salesforce.com/company/privacy/full_privacy/" class="bob-link"><span>https://www.salesforce.com/company/privacy/full_privacy/</span></a>. Except where prohibited, each potential winner consents to the use of their respective name, voice, photograph and/or likeness  for promotional purposes in any media without further payment or compensation, and may be required to provide a signed release acknowledging such consent.</li>
+            
+            <li><strong>SEVERABILITY:</strong>  If any provision of these Official Rules is found to be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from these Official Rules and shall not affect the validity and enforceability of any remaining provisions. Headings and captions are used in these Official Rules solely for convenience of reference and shall not be deeded to affect in any manner the meaning or intent of these Official Rules or any provision thereof.</li>
+            
+            <li><strong>DISPUTES:</strong>  Except where prohibited, entrant agrees that any and all disputes, actual or alleged claims, and causes of action at law or in equity, (“Claims”) will be resolved individually, without resort to any form of class action. Claims arising out of or relating to this Sweepstakes, including without limitation, the interpretation of the Official rules or any prize awarded will be resolved by applying the laws of California, without regard to conflict of laws. Claims will be solely and exclusively brought in the state or federal courts located in San Francisco, California. </li>
+            
+            <li><strong>SWEEPSTAKES RESULTS:</strong>  To receive the name, city and state of the winner, you can send an email to <a href="mailto:nicole.isaacson@mulesoft.com" class="bob-link"><span>nicole.isaacson@mulesoft.com</span></a> with the subject, “MuleSoft's Summer of Certification Sweepstakes”. Requests must be received within four (4) weeks of the end of the Entry Period.</li>
+            
+            <li><strong>NO SOCIAL MEDIA ENDORSEMENT:</strong> This Sweepstakes is in no way sponsored, endorsed or administered by, or associated with any social media platform, including but not limited to, LinkedIn. Any information you provide in connection with the Sweepstakes is to the Sweepstakes Entities and not to any social media platform. You understand that by using and interacting with any social media platform, you are subject to the terms, conditions, and policies that govern the use of those sites. You should therefore review their applicable terms and policies, including privacy and data gathering practices, before using and interacting with those sites. </li>
+            
+            <li><strong>SPONSOR CONTACT:</strong>  Salesforce, Inc., Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States. All rights reserved.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <h2 class="bob-h3 h-mb-16">आधिकारिक घुड़दौड़ (स्वीपस्टेक्स) के नियम</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center h-mb-60">
+        <div class="col-12 col-lg-10">
+          <ol class="bob-p">
+            <li><strong>प्रवेश करने या जीतने के लिए किसी खरीदारी की आवश्यकता नहीं है। खरीद या भुगतान से आपके जीतने के अवसरों में वृद्धि नहीं होगी। जहाँ निषिद्ध हो, वहाँ अमान्य है।</strong> </li>
+
+            <li><strong>आधिकारिक नियमों के लिए अनुबंध:</strong> स्वीपस्टेक्स में भाग लेना इन आधिकारिक नियमों ("आधिकारिक नियम") और न्यायाधीशों, प्रशासकों और प्रायोजक के निर्णयों की पूर्ण और बिना शर्त स्वीकृति को स्थापित करता है, जो सभी पहलुओं से अंतिम और बाध्यकारी हैं।</li>
+            
+            <li><strong>प्रविष्टि अवधि:</strong> The MuleSoft's Summer of Certification Sweepstakes (“स्वीपस्टेक्स”) Salesforce, Inc. (“प्रायोजक”) द्वारा प्रायोजित, 15 जून, 2022 को दोपहर 1 बजे PT से शुरू होता है और 17 जुलाई, 2022 को रात 11:59 बजे PT पर समाप्त होता है ("प्रवेश अवधि")। प्रायोजक का कंप्यूटर स्वीपस्टेक्स के लिए आधिकारिक घड़ी होगा। स्वीपस्टेक्स में प्रवेश करने या पुरस्कार जीतने का पात्र होने के लिए, सभी प्रविष्टियों का प्रवेश की अवधि के दौरान प्राप्त होना आवश्यक है। इन आधिकारिक नियमों में सभी समय प्रशांत समय ("PT") हैं।</li>
+            
+            <li><strong>पात्रता:</strong> यह स्वीपस्टेक्स उन व्यक्तियों के लिए खुला है (i) जो 50 अमेरिकी राज्यों (कोलम्बिया जिले सहित) और भारत (सामूहिक रूप से "पात्रता क्षेत्र") के कानूनी निवासी हैं, (ii) 18 वर्ष या उससे अधिक आयु  के हैं या जो प्रवेश की तिथि तक अपने निवास के अधिकार क्षेत्र में वयस्कता की आयु तक पहुंच चुके हैं, और (iii) जिनका एक LinkedIn अकाउंट है। कर्मचारी, ठेकेदार, परामर्शदाता, अधिकारी, निदेशक एवं एजेंट्स (और उनके निकटतम परिवार एवं पारिवारिक सदस्य इस बात से निरपेक्ष कि वे कहां रहते हैं) अथवा उसी घर के सदस्य हैं, चाहें वे प्रायोजक से संबंधित हैं या नहीं, उसके माता-पिता, डिवीजन, अनुषंगी, एजेंट्स, प्रमोशनल पार्टनर, विज्ञापन/प्रमोशन एजेंसियां, तथा पुरस्कार आपूर्तिकर्ता (“स्वीपस्टेक्स कंपनियां”) स्वीपस्टेक्स में भागीदारी अथवा कोई पुरस्कार जीतने के पात्र नहीं हैं। किसी भी सरकारी निकाय के कर्मचारी या अधिकारी इसमें भाग लेने या पुरस्कार जीतने के लिए पात्र नहीं हैं। यदि आप किसी कंपनी की ओर से इस स्वीपस्टेक्स में प्रवेश करते हैं, तो आप प्रतिनिधित्व करते हैं और गारंटी देते हैं कि आप प्रवेश करने के लिए उनकी ओर से प्राधिकरण के अधिकृत एजेंट हैं और उक्त कंपनी से आबद्ध हैं। पात्रता की आवश्यकताओं को पूरा करने में विफलता का परिणाम एक प्रविष्टि की अमान्यता और किसी भी पुरस्कार की जब्ती होगा। पात्रता क्षेत्र के बाहर की कंपनियां और व्यक्ति इसमें भाग लेने या पुरस्कार जीतने के लिए पात्र नहीं हैं। प्रायोजक ऐसे किसी भी प्रवेशक को अयोग्य घोषित करने का अधिकार सुरक्षित रखता है, जिसके बारे में प्रायोजक यह निर्धारित करता है कि वह संभावित प्रायोजक की छवि को नकारात्मक दर्शा सकता है। पात्रता क्षेत्र के बाहर और जहां निषिद्ध या कानून द्वारा प्रतिबंधित हो, उसमें शामिल न हों। स्वीपस्टेक्स लागू कानूनों के अधीन है।</li>
+            
+            <li><strong>प्रवेश के लिए:</strong> प्रवेश अवधि के दौरान, पात्र प्रतिभागियों को LinkedIn पर #CertSummer और #MuleSoft को सार्वजनिक रूप से पोस्ट करना जरूरी है। किसी भी स्वीपस्टेक्स सबमिशन को (i) किसी तीसरे पक्ष के अधिकारों का उल्लंघन, जिसमें कॉपीराइट, ट्रेडमार्क अधिकार, या गोपनीयता और प्रचार के अधिकार शामिल हैं, लेकिन इन्हीं तक सीमित नहीं; (ii) मानहानिकारक बयान; (iii) किसी व्यक्ति, स्थान, व्यवसाय या समूह को धमकी देना शामिल है; या (iv) अश्लील, अभद्र या आपत्तिजनक हो, नहीं करना चाहिए। यदि लागू हो, तो ऐसे व्यक्ति जो किसी स्क्रीनिंग प्रश्न के कारण प्रवेश फॉर्म या सर्वेक्षण को पूरा करने से अयोग्य हुए हैं, या जो किसी अन्य कारण से प्रवेश फॉर्म या सर्वेक्षण को पूरा करने में विफल रहते हैं, वे स्वीपस्टेक्स में प्रवेश नहीं ले सकते हैं। प्रवेश की विधि पर विचार किए बिना, प्रविष्टि अवधि के दौरान प्रति व्यक्ति एक (1) प्रविष्टि की सीमा होगी। प्रविष्टि जानकारी प्रायोजक की संपत्ति बन जाती है और उसे स्वीकारा या लौटाया नहीं जाएगा। देर से प्राप्त होने, अधूरी और/या उल्लिखित प्रविष्टि सीमा से अधिक होने पर प्रविष्टियों को अयोग्य घोषित कर दिया जाएगा। एजेंसियों या रोबोट द्वारा, दोहराव, स्वचालन, प्रोग्राम किये गए या इसी तरह के अन्य तरीकों से की गई कोई भी प्रविष्टि अमान्य हो जाएगी। </li>
+            
+            <li><strong>पुरस्कार और पुरस्कार मूल्य:</strong> एक सौ पचास (150) विजेताओं में से प्रत्येक को एक (1) विशेष संस्करण MuleSoft प्रमाणित टी-शर्ट मिलेगी। प्रत्येक पुरस्कार के अनुमानित खुदरा मूल्य ("ARV") $18 है। सभी पुरस्कारों का कुल एआरवी $2,700 है। इन Official Rules में सूचीबद्ध सभी मुद्राएं U.S. डॉलर में हैं। </li>
+
+            <li><strong>पुरस्कार विवरण और शर्तें:</strong> इस तालिका में निर्दिष्ट नहीं किए गए किसी पुरस्कार के विवरण को प्रायोजक द्वारा अपने विवेकाधिकार से निर्धारित किया जाएगा। पुरस्कार, हस्तांतरणीय, आबंटन या वापसी योग्य नहीं हैं और उन्हें नकदी से प्रतिस्थापित नहीं किया जा सकता है। पुरस्कारों को दिए जाने वाले रूप में स्वीकार किया जाना चाहिए। अगर किसी भी कारण से इन आधिकारिक नियमों में निर्धारित रूप से कोई पुरस्कार नहीं दिया जा सकता है, तो प्रायोजक के पास पुरस्कार के बराबर या उससे अधिक मौद्रिक मूल्य के पुरस्कार को प्रस्थापित करने का अधिकार सुरक्षित रहेगा।<br>
+            <strong>प्रायोजक खोए या चोरी किए गए पुरस्कार तत्वों के लिए ज़िम्मेदार नहीं है पुरस्कारों को विजेता की आय के रूप में रिपोर्ट किया जा सकता है और प्रत्येक विजेता किसी भी पुरस्कार की प्राप्ति से संबंधित सभी करों के लिए जिम्मेदार होगा। विजेताओं के लिए प्रायोजक द्वारा निर्धारित समय अवधि के भीतर आवश्यक टैक्स प्रपत्र या अनुरोध किए गए अन्य दस्तावेज़ों को पूरा करना आवश्यक हो सकता है। विजेता यहाँ सूचीबद्ध नहीं की गई किसी भी लागत और खर्च के लिए जिम्मेदार हो सकता है। विजेताओं को उनके पुरस्कार प्रासंगिक पुरस्कार तिथि की समाप्ति तिथि के साठ (60) दिनों के भीतर प्राप्त होंगे जब तक कि अन्यत्र सूचित न किया जाए। यदि घुड़दौड़ की निष्पक्षता से समझौता किया जाता है तो प्रायोजक उसे रद्द करने का अधिकार सुरक्षित रखता है। पुरस्कार का दावा करने के लिए पहचान, उम्र और/या कानूनी निवास का प्रमाण आवश्यक हो सकता है। आधिकारिक नियमों में उल्लिखित किसी भी आवश्यकता का पालन करने में विफलता का परिणाम अयोग्यता या पुरस्कार की जब्ती हो सकता है।</strong></li>
+
+            <li><strong>विजेता अधिसूचना और घोषणा:</strong> प्रवेश अवधि के दौरान प्राप्त सभी योग्य प्रविष्टियों में से प्रायोजक बेतरतीब ढंग से विजेताओं का चयन करेगा। संभावित विजेताओं को LinkedIn पर सीधे संदेश के माध्यम से 20 जुलाई, 2022 को या उसके आसपास सूचित किया जाएगा। किसी संभावित विजेता द्वारा किसी संभावित पुरस्कार की सूचना के खो जाने, बाधित होने या किसी भी कारण से प्राप्त न होने के लिए प्रायोजक उत्तरदायी नहीं होगा। यदि किसी संभावित विजेता से संपर्क करने के पहले प्रयास के बाद पांच (5) दिन के भीतर संपर्क नहीं किया जा सकता है, तो प्रायोजक शेष योग्य प्रविष्टियों से एक वैकल्पिक संभावित विजेता का चयन कर सकते हैं। यदि कोई संभावित विजेता किसी भी कारण पुरस्कार या पुरस्कार के किसी भी भाग को स्वीकार करने में असमर्थ है, तो ऐसे संभावित विजेता के लिए प्रायोजक का कोई और दायित्व नहीं होगा। प्रति प्रवेशक एक (1) पुरस्कार की सीमा है। जीतने के लिए आपको उपस्थित होने की जरूरत नहीं है। पुरस्कार जीतने के लिए, कनाडा में प्रवेश करने वालों को गणितीय कौशल-परीक्षण प्रश्न का सही जवाब देना आवश्यक है, जो प्रायोजक द्वारा निर्धारित तरीके से संचालित किया जाएगा। पुरस्कार को प्राप्त करने के लिए, विजेता को पात्रता, देयता और प्रचार रिलीज के घोषणा-पत्र (जब तक कानून द्वारा निषिद्ध न हो) को हस्ताक्षरित करने की आवश्यकता हो सकती है।</li>
+
+            <li><strong>जीतने की संभावना:</strong> जीतने की संभावना प्रवेश अवधि के दौरान प्राप्त वैध प्रविष्टियों की संख्या पर निर्भर करेगी।</li>
+
+            <li><strong>सामान्य शर्तें:</strong> स्वीपस्टेक्स संस्थाएं और इंटरनेट/वायरलेस एक्सेस प्रदाता किसी अधूरी, देरी से प्राप्त, खोई हुई, गलत पते वाली या डाक-देय प्रविष्टियों या मेल के लिए, या किसी तकनीकी खराबी, मानवीय त्रुटि, गुम या किसी टेलीफोन नेटवर्क, कंप्यूटर उपकरण, सॉफ्टवेयर या उसके किसी संयोजन के संबंध में विलंबित डेटा संचरण, चूक, रुकावट, विलोपन और दोष या लाइन विफलता के लिए जिम्मेदार नहीं हैं।&nbsp; अस्पष्ट, गलत और अधूरी, क्षतिग्रस्त, छेड़छाड़ की गई, जाली, मशीन से पुनरुत्पादित, किसी भी तरह से अनियमित या अन्यथा इन आधिकारिक नियमों के अनुपालन में न होने वाली प्रविष्टियां अमान्य होंगी।&nbsp; घुड़दौड़ संस्थाए कोई वारंटी नहीं देतीं, और एतद् द्वारा किसी भी पुरस्कार के बारे में दी गई या घुड़दौड़ के संबंध में उपलब्ध कराई गई, व्यक्त या निहित, किसी भी और सभी वारंटियों को अस्वीकार करती हैं।&nbsp; हालांकि प्रायोजक घुड़दौड़ की अखंडता को सुनिश्चित करने के लिए सभी प्रयास करते है, तथापि घुड़दौड़ (जुआ) संस्थान, घुड़दौड़ के संबंध में प्रवेशकों या अन्य व्यक्तियों के प्रयासों, सरकारी नियमों को दरकिनार करने या अन्यथा प्रशासन के साथ हस्तक्षेप, सहित सुरक्षा, निष्पक्षता, ईमानदारी या घुड़दौड़ के उचित आचरण के संबंध में प्रवेशकों या अन्य व्यक्तियों के कार्यों के लिए जिम्मेदार नहीं हैं। घुड़दौड़ संस्थाएं प्रवेशकों या किसी अन्य व्यक्ति के कंप्यूटर (रों), वायरलेस उपकरणों, अन्य उपकरण या घुड़दौड़ में भागीदारी से उत्पन्न या सामग्री डाउनलोड करने या किसी भी वेबसाइट का उपयोग करने के लिए संबंधित व्यक्ति (यों), या उपकरणों को होने वाली किसी चोट या क्षति के लिए जिम्मेदार नहीं हैं। इन आधिकारिक नियमों में निहित विवरण और किसी भी घुड़दौड़ विज्ञापन सामग्री में निहित किसी भी जानकारी के बीच किसी टकराव की स्थिति में, इन आधिकारिक नियमों में उल्लिखित घुड़दौड़ का ब्यौरा मान्य होगा। यदि, किसी भी कारण से, स्वीपस्टेक्स पात्र प्रविष्टियों की अपर्याप्त संख्या, कम्प्यूटर वायरस, कृमि, बग्स, छेड़छाड़, अनधिकृत हस्तक्षेप, धोखाधड़ी, तकनीकी सीमाएं या असफलता, किसी दैवीय कारण, आतंकवादी कृत्यों, भूकंप, युद्ध, आग, बाढ़, असामान्य रूप से गंभीर मौसम, हमलों या कानूनी विवाद (कानूनी या गैर कानूनी), उद्योग की स्थिति, दिवालिएपन या परिसमापन, बाजार की मांग, लागू कानून, अप्रत्याशित बाधाओं या किसी अन्य कारण से योजना के अनुसार स्वीपस्टेक्स को संचालित करने में सक्षम नहीं होता है जो पूरी तरह से प्रायोजक की राय में स्वीपस्टेक्स के उचित संचालन को भ्रष्ट, समझौता करने, कमजोर करने के रूप में या अन्यथा प्रशासन, सुरक्षा, निष्पक्षता, अखंडता, व्यवहार्यता को प्रभावित कर सकता है, ऐसी स्थिति में प्रायोजक अपने एकमात्र और पूर्ण विवेक से उसे रद्द करने, समाप्त करने, संशोधित करने के अधकार सुरक्षित रखता है या स्वीपस्टेक्स के सभी या किसी भी भाग को निलंबित कर सकते हैं, और इस तरह के रद्दीकरण, समाप्ति, संशोधन या निलंबन के समय तक प्राप्त पात्र प्रविष्टियों में से पुरस्कार के विजेता का चयन कर सकता है या इस प्रकार से आगे बढ़ सकता है, जिसे प्रायोजक द्वारा अपने विवेकाधिकार से निष्पक्ष और न्यायसंगत माना जा सकता है। स्क्रीन शॉट्स या प्रवेश प्रस्तुत करने के किसी भी अन्य सबूत को प्रविष्टि की प्राप्ति नहीं समझा जाएगा। &nbsp; प्रविष्टि प्रवेशक द्वारा और ऊपर वर्णित साधन के माध्यम से की जानी चाहिए। जब तक आपकी प्रविष्टि को सत्यापित नहीं किया गया हो और आपने इन आधिकारिक नियमों का पालन नहीं किया है, आप विजेता नहीं हैं। किसी भी ऑनलाइन प्रविष्टि के संबंध में एक विवाद की स्थिति में, यदि कोई हो, घुड़दौड़ में प्रवेश करने के लिए प्रयोग किये गए ई-मेल पते को अधिकृत खाता धारक प्रवेशक माना जाएगा।&nbsp; &quot;अधिकृत खाता धारक&quot; वह वास्तविक व्यक्ति है, जिसे एक इंटरनेट उपयोग प्रदाता, ऑनलाइन सेवा प्रदाता या ईमेल पते सौपने के लिए जिम्मेदार अन्य संगठन द्वारा संबद्ध डोमेन के लिए प्रस्तुत ईमेल पता सौंपा गया है।</li>
+
+            <li><strong>आचरण:</strong> इस स्वीपस्टेक्स में प्रवेश कर और इसमें भाग लेकर, आप: (ए) पूरी तरह और बिना शर्त इन आधिकारिक नियमों द्वारा बाध्य होने और प्रायोजक के सभी निर्णयों (जिनमें से सभी निर्णयों से बंधे होने के लिए) पात्रता, विजेताओं और इन आधिकारिक नियमों में प्रयुक्त शर्तों की व्याख्या के संबंध में बिना किसी सीमा के निर्णय सहित सहमत हैं; (बी) प्रतिनिधित्व और वारंटी करते है कि स्वीपस्टेक्स के संबंध में आपके द्वारा प्रदान की गई सभी जानकारी सही, सटीक और पूर्ण है; और (सी) सभी संघीय, राज्य, स्थानीय, क्षेत्रीय, और प्रांतीय कानूनों और विनियमों का पालन करने के लिए सहमत हैं। प्रायोजक किसी भी समय और अपने विवेकाधिकार पर, किसी भी व्यक्ति को इस स्वीपस्टेक्स या किसी भी भविष्य प्रायोजक प्रचार में भाग लेने के लिए अयोग्य ठहराने तथा/अथवा अयोग्य मानने का अधिकार सुरक्षित रखता है, यदि संदेह हो कि: (ए) प्रवेश प्रक्रिया या स्वीपस्टेक्स या किसी वेबसाइट के संचालन के साथ छेड़छाड़ की है; (बी) आधिकारिक नियमों या प्रायोजक की गोपनीयता नीति या अन्य नियमों, शर्तों या दिशानिर्देशों के उल्लंघन में कार्य किया है; (सी) बुरे विश्वास में या एक विघटनकारी तरीके से कार्य किया, या किसी अन्य व्यक्ति को परेशान करने, दुर्व्यवहार करने, धमकी देने या परेशान करने के इरादे से कार्य किया है; (डी) इन आधिकारिक नियमों से सहमत होने में विफल रहा है; या (ई) इन आधिकारिक नियमों का उल्लंघन कर रहा है। प्रवेशार्थी या किसी अन्य व्यक्ति द्वारा जानबूझकर किसी भी इंटरनेट साइट को क्षति पहुँचाने या घुड़दौड़ के वैध संचालन को कमजोर करने का कोई भी प्रयास इन सरकारी नियमों का उल्लंघन और साथ ही आपराधिक और नागरिक कानूनों के अंतर्गत अपराध है। अगर प्रायोजक समझता है या उसे पता चलता है कि इस तरह का प्रयास किया गया है, किया जा रहा है या किया जाएगा, तो प्रायोजक किसी भी जिम्मेदार प्रवेशक (कों) और अन्य जिम्मेदार व्यक्ति (यों) से उपचार और नुकसान पूरा करने का प्रयास करने का अधिकार सुरक्षित रखता है, जो पूर्ण सीमा तक कानून द्वारा अनुमत, रोक के बगैर आपराधिक मुकदमा चलाना हो सकता है।</li>
+
+            <li><strong>रिहाई, दायित्व की सीमा, और क्षतिपूर्ति:</strong> इस स्वीपस्टेक्स में भाग लेकर, आप हानिरहित प्रायोजक, उसके माता-पिता, उसकी सहायक कंपनियों, सहयोगियों और उनके प्रत्येक संबंधित अधिकारी को रिहा करने, क्षतिपूर्ति करने और रखने के लिए सहमत हैं, स्वीपस्टेक्स में भागीदारी या किसी पुरस्कार की प्राप्ति या प्रयोग से उत्पन्न होने वाले किसी भी दावे या कार्यवाही के खिलाफ निदेशक, कर्मचारी और एजेंट, सहित लेकिन इन तक सीमित नहीं: (ए) स्वीपस्टेक्स में अनधिकृत मानव हस्तक्षेप; (बी) तकनीकी त्रुटियां; (सी) मुद्रण त्रुटियां; (डी) देरी से या डिलीवर नहीं हुई मेल; (ई) स्वीपस्टेक्स के प्रशासन में त्रुटियां; या (एफ) व्यक्तियों या संपत्ति को चोट या क्षति। आप किसी भी एटॉर्नी की फीस और किसी भी क्षति के दावा करने का अधिकार छोड़ते हैं, जिसमें दंडात्मक, परिणामी, प्रत्यक्ष या अप्रत्यक्ष क्षति शामिल है लेकिन केवल यहीं तक ही सीमित नहीं हैं। प्रवेशकर्ता इस बात से सहमत हैं कि कार्रवाई के किसी भी कारण में, स्वीपस्टेक्स संस्थाएं, और उनके प्रत्येक संबंधित अधिकारी, निदेशक, कर्मचारी, प्रतिनिधि, एजेंट, शेयरधारक, उत्तराधिकारी और नियुक्त की देयता स्वीपस्टेक में प्रवेश करने और भाग लेने की लागत तक सीमित होगी।</li>
+
+            <li><strong>गोपनीयता और प्रचार:</strong> स्वीपस्टेक्स के भाग के रूप में आपके द्वारा जमा की गई कोई भी जानकारी प्रायोजक की <a href="https://www.salesforce.com/company/privacy/full_privacy/" class="bob-link"><span>गोपनीयता विवरण</span></a>, के अनुसार संसाधित की जाएगी जो वर्तमान में <a href="https://www.salesforce.com/company/privacy/full_privacy/" class="bob-link"><span>https://www.salesforce.com/company/privacy/full_privacy/</span></a> पर स्थित है। जहां निषिद्ध है उसे छोड़कर, हर संभावित विजेता किसी मीडिया में प्रचार उद्देश्यों के लिए बिना किसी भुगतान या पारितोषिक के अपने नाम, आवाज, फोटो तथा/अथवा समानता का प्रयोग करने की सहमति देता है और ऐसी सहमति स्वीकार करने की एक हस्ताक्षरित विज्ञप्ति प्रदान करने की आवश्यकता हो सकती है।</li>
+
+            <li><strong>पृथक्करणीयता:</strong> यदि इन आधिकारिक नियमों का कोई प्रावधान गैरकानूनी, शून्य, अथवा किसी कारणवश अप्रवर्तनीय पाया जाता है, तो उस प्रावधान को इन आधिकारिक नियमों से अलग करने योग्य समझा जाएगा और किसी भी शेष प्रावधानों की वैधता और प्रवर्तनीयता को प्रभावित नहीं करेगा। इन आधिकारिक नियमों में शीर्षकों और कैप्शन का उपयोग केवल संदर्भ की सुविधा के लिए किया गया है और ये इन आधिकारिक नियमों या किसी भी प्रावधान के अर्थ या इरादे को किसी भी तरह से प्रभावित नहीं करेंगे। </li>
+
+            <li><strong>विवाद:</strong> जहां निषिद्ध है, को छोड़कर, प्रवेशकर्ता सहमत है कि किसी भी और सभी विवादों, वास्तविक या कथित दावों, और कानून या इक्विटी में कार्रवाई के कारणों ("दावों") को बिना किसी वर्ग कार्रवाई का सहारा लिए व्यक्तिगत रूप से हल किया जाएगा। बिना सीमा के दावों सहित, इस घुड़दौड़ से संबंधित या इससे उत्पन्न होने वाले दावों, सरकारी नियम की व्याख्या या किसी भी पुरस्कार के दावों का समाधान, कानूनों के संघर्ष के संबंध पर विचार किए बगैर, कैलिफोर्निया के कानूनों के अनुसार किया जाएगा। दावों को पूरी तरह से और विशेष रूप से सैन फ्रांसिस्को, कैलिफोर्निया में स्थित राज्य या संघीय अदालतों में लाया जाएगा। </li>
+
+            <li><strong>स्वीपस्टेक्स परिणाम:</strong> विजेता का नाम, शहर और राज्य प्राप्त करने के लिए, आप nicole.isaacson@mulesoft.com पर "MuleSoft's Summer of Certification Sweepstakes" विषय के साथ ईमेल भेज सकते हैं। अनुरोध प्रवेश की अवधि के अंत से चार (4) सप्ताह के भीतर प्राप्त हो जाना चाहिए।</li>
+
+            <li><strong>कोई सोशल मीडिया समर्थन नहीं:</strong> यह स्वीपस्टेक्स किसी भी रूप में प्रायोजित, समर्थित या प्रशासित या किसी भी सोशल मीडिया प्लेटफॉर्म से संबद्ध नहीं है, जिसमें LinkedIn भी शामिल है, लेकिन इसी तक सीमित नहीं। स्वीपस्टेक्स के संबंध में, आप जो भी जानकारी प्रदान करते हैं वह स्वीपस्टेक्स कंपनियों के लिए है, किसी अन्य सोशल मीडिया प्लेटफॉर्म के लिए नहीं। आप समझते हैं कि किसी भी सोशल मीडिया प्लेटफॉर्म के उपयोग और इंटरैक्ट करने से, आप उन नियमों, शर्तों और नीतियों के अधीन होते हैं जो उन साइटों के उपयोग को नियंत्रित करती हैं। इसलिए, उन साइटों का उपयोग या उनसे इंटरैक्ट करने से पहले, गोपनीयता और डेटा एकत्र करने की प्रथाओं सहित लागू शर्तों और नीतियों की समीक्षा करनी चाहिए। </li>
+
+            <li><strong>प्रायोजक संपर्क:</strong> Salesforce, Inc., Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States. सर्वाधिकार सुरक्षित।</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 3 benefits END -->
+
+</div>
+</main>
+
+<script src ="js/shared/jquery.min.js"> </script>
+<script src ="js/shared/bootstrap.min.js"> </script>
+<script src ="https://www.mulesoft.com/training/assets/js/summer-ocm.js"> </script>

@@ -1,0 +1,51 @@
+.eb-section {
+  padding: 64px 0;
+}
+/* help widget */
+//css on zd-widget.js
+
+/* help widget */
+
+/* a11y old service */
+
+#INDWrap, .eb-page-banner.eb-breadcrumb-only {
+  display: none !important;
+}
+
+#eb-my-items-section > .container-fluid {
+  padding: 0; // make it 100% wide
+  overflow: hidden; // instead of margin reset on child row from margin -8px
+}
+
+.scroll-margin {
+  scroll-margin-top: 65px;
+}
+
+.eb-common-footer {
+  @media (min-width: 768px) {
+    .col-md-4 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+    .col-md-6 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .offset-md-1 {
+      margin-left: 8.333333%;
+    }
+  }
+  @media (min-width: 992px) {
+    .col-lg-4 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+
+}

@@ -1,0 +1,194 @@
+// Remove help and Stormbreaker
+
+#launcher {
+  display: none !important;
+}
+
+.eb-section {
+  padding: 0;
+}
+
+.eb-page-banner {
+  display: none;
+}
+
+.footer-inside {
+  text-align: left;
+}
+
+footer.border-top {
+  border-top: none !important;
+}
+
+//missing margin on the header fix
+
+.eb-sub-header {
+  margin-top: 34px;
+
+  @media screen and ( min-width: $md ) {
+    margin-top: 0;
+  }
+}
+
+// bootstrap/EB fixes
+
+a {
+  text-decoration: none;
+}
+
+.bg-secondary {
+  background-color: #00044C !important;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+// END bootstrap/EB fixes
+
+#summer-ocm {
+
+  // Additional styles
+
+  // Focus styling
+
+  :focus, [tabindex="0"]:focus {
+    outline-color: #D71EF7;
+    outline: 1px solid #D71EF7 !important;
+  }
+
+
+  // Display helpers
+
+  .hidden {
+    display: none;
+  }
+
+  .hidden-lg {
+    @media screen and ( min-width: $md ) {
+      display: none;
+    }
+  }
+
+  .show-lg {
+    @media screen and ( min-width: $md ) {
+      display: block;
+    }
+  }
+
+  // margin helpers
+
+  .h-mb-0 {
+    margin-bottom: 0;
+  }
+
+  .h-mb-16 {
+    margin-bottom: 16px;
+  }
+
+  .h-mb-66 {
+    margin-bottom: 66px;
+  }
+
+  .h-mb-36 {
+    margin-bottom: 36px;
+  }
+
+  .h-mb-40 {
+    margin-bottom: 40px;
+  }
+
+  .h-mb-48 {
+    margin-bottom: 48px;
+  }
+
+  .h-mb-56 {
+    margin-bottom: 56px;
+  }
+
+  .h-mb-60 {
+    margin-bottom: 60px;
+  }
+
+  .h-mb-64 {
+    margin-bottom: 64px;
+  }
+
+  .h-mb-80 {
+    margin-bottom: 80px;
+  }
+
+  .h-mb-108 {
+    margin-bottom: 108px;
+  }
+
+  .h-mb-0-md {
+    @media screen and ( min-width: $md ) {
+      margin-bottom: 0;
+    }
+  }
+
+  .h-mt-120-tabs-bp {
+
+    @media screen and ( min-width: $md ) {
+      margin-top: 120px;
+    }
+  }
+
+  .scroll-margin {
+    scroll-margin-top: 80px;
+  }
+
+  // Font size _helpers
+
+  .h-fs-xs {
+    font-size: var(--fs-xs); //12px
+  }
+
+  .--fs-md-28 {
+    
+    @media screen and ( min-width: $md ) {
+      font-size: 28px;
+    }
+  }
+
+  // Container replacement fix
+  #eb-my-items-section > .container-fluid {
+    padding: 0; // make it 100% wide
+    overflow: hidden; // instead of margin reset on child row from margin -8px
+
+  }
+
+  // missing links finder
+  a[href="#"] {
+    color: #b11818 !important;
+  }
+
+
+  #hero {
+    .bob-header__image {
+      overflow: unset;
+    }
+  }
+
+  #cards{
+    .col-12:last-of-type {
+      
+      .bob-card {
+        margin-bottom: 0;
+      }
+    }
+    
+    .h-clamp-lg-3 {
+      @media screen and ( min-width: $lg ) {
+        min-height: calc( var(--lineheight) * 3 );  // minimum height is equivalent to twice the P line height
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
+
+  //#zigzags {}
+
+
+}

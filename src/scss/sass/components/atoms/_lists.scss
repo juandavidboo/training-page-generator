@@ -1,0 +1,60 @@
+.bob-list {
+  .bob-h3 {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  &.bullet--check {
+    margin-bottom: 24px;
+    list-style: none;
+    
+    li {
+      position: relative;
+      padding-left: 40px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+
+        mask: var(--icon-check); //url('components/assets/icon_16_clock.svg');
+        -webkit-mask: var(--icon-check); //url('components/assets/icon_16_clock.svg');
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: #23A566;
+      }
+    }
+
+  }
+  &.definition.bullet--check {
+    margin-bottom: 40px;
+    
+    dd {
+      margin-bottom: 16px;
+    }
+    dt {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 24px;
+        width: 24px;
+
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: #23A566;
+        mask: var(--icon-check); //url('components/assets/icon_16_clock.svg');
+        -webkit-mask: var(--icon-check); //url('components/assets/icon_16_clock.svg');
+      }
+    }
+    dt, dd {
+      padding-left: 40px;
+    }
+  }
+}

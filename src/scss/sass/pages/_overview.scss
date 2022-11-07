@@ -1,0 +1,133 @@
+/*a[href="#"], a[href=""] {
+  color: #EA001E !important;
+  border: 1px solid #EA001E !important;
+}*/
+
+#overview {
+
+  .hero {
+    .bob-header__text {
+      margin: 64px 0 64px 0;
+    }
+  }
+
+  .hero-cards {
+
+    .h-gradient-bkg-bluez {
+
+      &::after {
+        top: 23%;
+
+        @media screen and ( min-width: $md ) {
+          top: 50%;
+        }
+      }
+    }
+
+    .bob-card {
+
+      @media screen and ( min-width: $md ) {
+        margin-bottom: 0;
+      }
+
+      .bob-h3 {
+        font-size: calc(var(--token-8) * 3);
+
+        @media screen and ( min-width: $md ) {
+          @include ellipsis (2);
+          min-height: var(--lineheight);
+        }
+      }
+
+      .bob-h3 {
+        font-size: calc(var(--token-8) * 3);
+        line-height: 1.33;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .banner-card {
+    position: relative;
+
+
+
+    .bob-card-wide {
+      position: relative;
+      overflow: hidden;
+      padding: 32px 0;
+      background-color: transparent;
+
+      @media screen and ( min-width: $sm ) {
+        padding: 48px 0;
+      }
+
+      @media screen and ( min-width: $md ) {
+        padding: 56px 0;
+      }
+
+      @media screen and ( min-width: $lg ) {
+        padding: 64px 0;
+      }
+
+      .bob-card-wide__img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+          object-fit: contain;
+          width: auto;
+          height: auto;
+          margin-left: 32px;
+          
+          @media screen and ( min-width: $md ) {
+            width: 100%;
+            margin-left: 0;
+          }
+        }
+
+        .image_desk {
+          display: block;
+        }
+      }
+
+      .bob-card-wide__txt {
+        padding: 40px 32px 0 32px;
+
+        @media screen and ( min-width: $md ) {
+          padding: 0 32px 0 32px;
+        }
+
+        .bob-h3 {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .bkg-circle-shape {
+      @media screen and ( min-width: $md ) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 32px;
+          right: -100%;
+          width: 225%;
+          padding-top: 225%;
+          border-radius: 50%;
+          z-index: -1;
+        }
+      }
+    }
+    
+    .bkg-color-blue {
+      &::before {
+        background-color: #E8F8FF;
+      }
+    }
+
+  }
+
+}

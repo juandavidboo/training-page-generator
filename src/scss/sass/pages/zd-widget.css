@@ -1,0 +1,60 @@
+#launcher {
+  bottom: 57px !important;
+}
+
+.top-flag-banner.h-bkg--zircon {
+  border-bottom: 1px solid #00A0DF;
+  border-top: 1px solid #00A0DF;
+  background-color: #EEF4FF;
+  text-align: center;
+}
+
+.top-flag-banner .bob-h4 {
+  font-family: "DINProBold", Arial, sans-serif !important;
+  font-weight: bold;
+  margin-top: 4px;
+  line-height: 20px;
+}
+
+.top-flag-banner .bob-h4, .top-flag-banner .bob-link {
+  font-size: 13px;
+  margin: 0;
+  display: inline-block;
+}
+
+.bob-link {
+  color: #00A0DF;
+  color: #002196;
+  font-family: 'open_sansbold', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.bob-link:focus, .bob-link:hover {
+  text-decoration: none;
+  color: #00044C;
+}
+
+.bob-link span {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size .3s;
+}
+
+.bob-link:hover span {
+  background-size: 100% 1px;
+}
+
+@media screen and (min-width: 768px) {
+  #launcher {
+    bottom: 65px !important;
+  }
+  .top-flag-banner .col-12 {
+    text-align: left;
+  }
+}
